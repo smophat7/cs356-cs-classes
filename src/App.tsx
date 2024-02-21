@@ -1,9 +1,8 @@
 import "@mantine/core/styles.css";
-import { AppShell, Center, MantineProvider, Text } from "@mantine/core";
+import { AppShell, MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
 import rawQuotes from "./data/quotes.json";
 import rawCategorizations from "./data/tagCategories.json";
-import footerText from "./data/footer_text.json";
 import {
   TopLevelCategory,
   RawCategorizations,
@@ -16,17 +15,11 @@ import { RouteEndpoints } from "./types/RouteEndpoints";
 import { AppHeader, AppRoutes, CategoryNavbar } from "./components";
 import { useEffect, useState } from "react";
 
-function getFooterText(): string {
-  const options = footerText.options;
-  return options[Math.floor(Math.random() * options.length)];
-}
-
 export default function App() {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
   const location = useLocation();
   const isMethod1 = location.pathname === RouteEndpoints.Method1;
   const isMethod3 = location.pathname === RouteEndpoints.Method3;
-  const footer = getFooterText();
   const [topLevelCategories, setTopLevelCategories] = useState<
     TopLevelCategory[]
   >([]);
@@ -98,13 +91,6 @@ export default function App() {
             selectedSubcategory={selectedSubcategory}
           />
         </AppShell.Main>
-        <AppShell.Footer>
-          <Center h="100%">
-            <Text ta="center" size="xs" p={3}>
-              {footer} (this notice also by ChatGPT).
-            </Text>
-          </Center>
-        </AppShell.Footer>
       </AppShell>
     </MantineProvider>
   );

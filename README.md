@@ -11,3 +11,5 @@ npm install
 ```bash
 npm run dev
 ```
+
+See the [Mantine UI docs](https://mantine.dev/getting-started/) and [Mantine UI templates](https://ui.mantine.dev/)
