@@ -1,0 +1,666 @@
+[
+  {
+    "author": "Albert Einstein",
+    "tags": ["science", "imagination"],
+    "medium": "speech",
+    "quote_content": "Imagination is more important than knowledge.",
+    "date": "1931-05-14",
+    "language": "English"
+  },
+  {
+    "author": "Friedrich Nietzsche",
+    "tags": ["philosophy", "truth"],
+    "medium": "book",
+    "quote_content": "All things are subject to interpretation; whichever interpretation prevails at a given time is a function of power and not truth.",
+    "date": "1889-08-15",
+    "language": "German"
+  },
+  {
+    "author": "Isabel Allende",
+    "tags": ["inspiration", "storytelling"],
+    "medium": "podcast",
+    "quote_content": "Write what should not be forgotten.",
+    "date": "2007-11-21",
+    "language": "Spanish"
+  },
+  {
+    "author": "Maya Angelou",
+    "tags": ["wisdom", "life"],
+    "medium": "book",
+    "quote_content": "You may not control all the events that happen to you, but you can decide not to be reduced by them.",
+    "date": "1969-02-18",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["creativity", "art"],
+    "medium": "speech",
+    "quote_content": "Art is the mediator of the inexpressible.",
+    "date": "1807-06-10",
+    "language": "German"
+  },
+  {
+    "author": "Gabriel García Márquez",
+    "tags": ["magic realism", "love"],
+    "medium": "book",
+    "quote_content": "Age isn't how old you are but how old you feel.",
+    "date": "1985-03-11",
+    "language": "Spanish"
+  },
+  {
+    "author": "Steve Jobs",
+    "tags": ["innovation", "technology"],
+    "medium": "speech",
+    "quote_content": "Innovation distinguishes between a leader and a follower.",
+    "date": "2005-06-12",
+    "language": "English"
+  },
+  {
+    "author": "Johann Sebastian Bach",
+    "tags": ["music", "passion"],
+    "medium": "letter",
+    "quote_content": "The aim and final end of all music should be none other than the glory of God and the refreshment of the soul.",
+    "date": "1721-12-25",
+    "language": "German"
+  },
+  {
+    "author": "Pablo Neruda",
+    "tags": ["poetry", "nature"],
+    "medium": "book",
+    "quote_content": "You can cut all the flowers but you cannot keep spring from coming.",
+    "date": "1950-09-05",
+    "language": "Spanish"
+  },
+  {
+    "author": "Martin Luther King Jr.",
+    "tags": ["justice", "equality"],
+    "medium": "speech",
+    "quote_content": "Injustice anywhere is a threat to justice everywhere.",
+    "date": "1963-08-28",
+    "language": "English"
+  },
+  {
+    "author": "Marie Curie",
+    "tags": ["science", "curiosity"],
+    "medium": "interview",
+    "quote_content": "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
+    "date": "1921-04-03",
+    "language": "French"
+  },
+  {
+    "author": "Hermann Hesse",
+    "tags": ["wisdom", "self-discovery"],
+    "medium": "book",
+    "quote_content": "Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish.",
+    "date": "1922-11-10",
+    "language": "German"
+  },
+  {
+    "author": "Isaac Newton",
+    "tags": ["knowledge", "science"],
+    "medium": "letter",
+    "quote_content": "If I have seen further it is by standing on the shoulders of Giants.",
+    "date": "1675-02-05",
+    "language": "English"
+  },
+  {
+    "author": "Franz Kafka",
+    "tags": ["existentialism", "society"],
+    "medium": "letter",
+    "quote_content": "I write differently from what I speak, I speak differently from what I think, I think differently from the way I ought to think, and so it all proceeds into deepest darkness.",
+    "date": "1917-07-20",
+    "language": "German"
+  },
+  {
+    "author": "Gloria Anzaldúa",
+    "tags": ["identity", "borderlands"],
+    "medium": "essay",
+    "quote_content": "To survive the Borderlands you must live sin fronteras be a crossroads.",
+    "date": "1987-09-03",
+    "language": "English"
+  },
+  {
+    "author": "Goethe",
+    "tags": ["change", "growth"],
+    "medium": "book",
+    "quote_content": "Knowing is not enough; we must apply. Willing is not enough; we must do.",
+    "date": "1829-12-01",
+    "language": "German"
+  },
+  {
+    "author": "Octavio Paz",
+    "tags": ["poetry", "language"],
+    "medium": "speech",
+    "quote_content": "A society, no matter how well-ordered, is only as healthy as its language.",
+    "date": "1981-06-30",
+    "language": "Spanish"
+  },
+  {
+    "author": "Mark Twain",
+    "tags": ["humor", "wisdom"],
+    "medium": "book",
+    "quote_content": "The two most important days in your life are the day you are born and the day you find out why.",
+    "date": "1885-12-12",
+    "language": "English"
+  },
+  {
+    "author": "Immanuel Kant",
+    "tags": ["philosophy", "ethics"],
+    "medium": "book",
+    "quote_content": "Act only according to that maxim whereby you can at the same time will that it should become a universal law.",
+    "date": "1785-04-16",
+    "language": "German"
+  },
+  {
+    "author": "Antonio Machado",
+    "tags": ["poetry", "nature"],
+    "medium": "poem",
+    "quote_content": "Traveler, there is no path, the path must be forged as you walk.",
+    "date": "1912-08-29",
+    "language": "Spanish"
+  },
+  {
+    "author": "Rainer Maria Rilke",
+    "tags": ["love", "art"],
+    "medium": "letter",
+    "quote_content": "For one human being to love another: that is perhaps the most difficult of our tasks; the ultimate, the last test and proof, the work for which all other work is but preparation.",
+    "date": "1904-06-12",
+    "language": "German"
+  },
+  {
+    "author": "Cervantes",
+    "tags": ["literature", "adventure"],
+    "medium": "book",
+    "quote_content": "When life itself seems lunatic, who knows where madness lies?",
+    "date": "1605-01-16",
+    "language": "Spanish"
+  },
+  {
+    "author": "Charles Darwin",
+    "tags": ["evolution", "adaptation"],
+    "medium": "book",
+    "quote_content": "It is not the strongest of the species that survives, nor the most intelligent; it is the one most responsive to change.",
+    "date": "1859-11-24",
+    "language": "English"
+  },
+  {
+    "author": "Johann Gottfried Herder",
+    "tags": ["language", "culture"],
+    "medium": "essay",
+    "quote_content": "Without language, thought is a vague, uncharted nebula.",
+    "date": "1772-03-01",
+    "language": "German"
+  },
+  {
+    "author": "Pablo Picasso",
+    "tags": ["art", "creativity"],
+    "medium": "interview",
+    "quote_content": "Every child is an artist. The problem is how to remain an artist once we grow up.",
+    "date": "1957-09-10",
+    "language": "Spanish"
+  },
+  {
+    "author": "Virginia Woolf",
+    "tags": ["literature", "identity"],
+    "medium": "book",
+    "quote_content": "Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.",
+    "date": "1928-07-26",
+    "language": "English"
+  },
+  {
+    "author": "Hermann Hesse",
+    "tags": ["peace", "spirituality"],
+    "medium": "book",
+    "quote_content": "Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish.",
+    "date": "1922-11-10",
+    "language": "German"
+  },
+  {
+    "author": "Sor Juana Inez de la Cruz",
+    "tags": ["feminism", "knowledge"],
+    "medium": "poem",
+    "quote_content": "I don't study to know more, but to ignore less.",
+    "date": "1680-02-19",
+    "language": "Spanish"
+  },
+  {
+    "author": "George Orwell",
+    "tags": ["freedom", "truth"],
+    "medium": "essay",
+    "quote_content": "Freedom is the right to tell people what they do not want to hear.",
+    "date": "1945-11-17",
+    "language": "English"
+  },
+  {
+    "author": "Rainer Maria Rilke",
+    "tags": ["solitude", "introspection"],
+    "medium": "letter",
+    "quote_content": "I hold this to be the highest task for a bond between two people: that each protects the solitude of the other.",
+    "date": "1904-06-12",
+    "language": "German"
+  },
+  {
+    "author": "Miguel de Unamuno",
+    "tags": ["faith", "philosophy"],
+    "medium": "book",
+    "quote_content": "Faith which does not doubt is dead faith.",
+    "date": "1912-04-08",
+    "language": "Spanish"
+  },
+  {
+    "author": "Voltaire",
+    "tags": ["philosophy", "freedom"],
+    "medium": "book",
+    "quote_content": "I do not agree with what you have to say, but I'll defend to the death your right to say it.",
+    "date": "1758-03-10",
+    "language": "French"
+  },
+  {
+    "author": "Mariano José de Larra",
+    "tags": ["journalism", "satire"],
+    "medium": "essay",
+    "quote_content": "A journalist is a grumbler, a censurer, a giver of advice, a regent of sovereigns, a tutor of nations. Four hostile newspapers are more to be feared than a thousand bayonets.",
+    "date": "1834-01-13",
+    "language": "Spanish"
+  },
+  {
+    "author": "Jane Austen",
+    "tags": ["love", "relationships"],
+    "medium": "book",
+    "quote_content": "A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.",
+    "date": "1813-01-28",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["wisdom", "life"],
+    "medium": "letter",
+    "quote_content": "Man sees in the world what he carries in his heart.",
+    "date": "1787-09-14",
+    "language": "German"
+  },
+  {
+    "author": "Octavio Paz",
+    "tags": ["identity", "culture"],
+    "medium": "speech",
+    "quote_content": "Each of us is several, is many, is a profusion of selves. So that the self who disdains his surroundings is not the same as the self who suffers or takes joy in them.",
+    "date": "1975-06-10",
+    "language": "Spanish"
+  },
+  {
+    "author": "Ernest Hemingway",
+    "tags": ["writing", "courage"],
+    "medium": "book",
+    "quote_content": "There is nothing to writing. All you do is sit down at a typewriter and bleed.",
+    "date": "1929-11-02",
+    "language": "English"
+  },
+  {
+    "author": "Friedrich Schiller",
+    "tags": ["beauty", "art"],
+    "medium": "letter",
+    "quote_content": "Art is the daughter of freedom.",
+    "date": "1794-12-25",
+    "language": "German"
+  },
+  {
+    "author": "Gabriel García Márquez",
+    "tags": ["magic realism", "love"],
+    "medium": "book",
+    "quote_content": "What matters in life is not what happens to you but what you remember and how you remember it.",
+    "date": "1981-04-27",
+    "language": "Spanish"
+  },
+  {
+    "author": "Charlotte Brontë",
+    "tags": ["love", "passion"],
+    "medium": "book",
+    "quote_content": "I am no bird; and no net ensnares me: I am a free human being with an independent will.",
+    "date": "1847-10-16",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["music", "passion"],
+    "medium": "letter",
+    "quote_content": "Music is liquid architecture; Architecture is frozen music.",
+    "date": "1817-12-01",
+    "language": "German"
+  },
+  {
+    "author": "Albert Einstein",
+    "tags": ["science", "imagination"],
+    "medium": "speech",
+    "quote_content": "Logic will get you from A to B. Imagination will take you everywhere.",
+    "date": "1933-09-11",
+    "language": "English"
+  },
+  {
+    "author": "Friedrich Nietzsche",
+    "tags": ["philosophy", "truth"],
+    "medium": "book",
+    "quote_content": "He who has a why to live can bear almost any how.",
+    "date": "1887-11-03",
+    "language": "German"
+  },
+  {
+    "author": "Isabel Allende",
+    "tags": ["inspiration", "storytelling"],
+    "medium": "podcast",
+    "quote_content": "The most important things are the hardest to say because words diminish them.",
+    "date": "2004-06-18",
+    "language": "Spanish"
+  },
+  {
+    "author": "Maya Angelou",
+    "tags": ["wisdom", "life"],
+    "medium": "book",
+    "quote_content": "My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style.",
+    "date": "1978-02-14",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["creativity", "art"],
+    "medium": "speech",
+    "quote_content": "He who possesses art and science has religion; he who does not possess them, needs religion.",
+    "date": "1825-07-30",
+    "language": "German"
+  },
+  {
+    "author": "Gabriel García Márquez",
+    "tags": ["magic realism", "love"],
+    "medium": "book",
+    "quote_content": "No medicine cures what happiness cannot.",
+    "date": "1982-09-08",
+    "language": "Spanish"
+  },
+  {
+    "author": "Steve Jobs",
+    "tags": ["innovation", "technology"],
+    "medium": "speech",
+    "quote_content": "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.",
+    "date": "2006-06-05",
+    "language": "English"
+  },
+  {
+    "author": "Johann Sebastian Bach",
+    "tags": ["music", "passion"],
+    "medium": "letter",
+    "quote_content": "The greatest glory of a free-born people is to transmit that freedom to their children.",
+    "date": "1727-04-23",
+    "language": "German"
+  },
+  {
+    "author": "Pablo Neruda",
+    "tags": ["poetry", "nature"],
+    "medium": "book",
+    "quote_content": "Love is so short, forgetting is so long.",
+    "date": "1952-12-07",
+    "language": "Spanish"
+  },
+  {
+    "author": "Martin Luther King Jr.",
+    "tags": ["justice", "equality"],
+    "medium": "speech",
+    "quote_content": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+    "date": "1963-12-10",
+    "language": "English"
+  },
+  {
+    "author": "Marie Curie",
+    "tags": ["science", "curiosity"],
+    "medium": "interview",
+    "quote_content": "Nothing in life is to be feared; it is only to be understood. Now is the time to understand more, so that we may fear less.",
+    "date": "1920-11-01",
+    "language": "French"
+  },
+  {
+    "author": "Hermann Hesse",
+    "tags": ["wisdom", "self-discovery"],
+    "medium": "book",
+    "quote_content": "Some of us think holding on makes us strong, but sometimes it is letting go.",
+    "date": "1927-03-15",
+    "language": "German"
+  },
+  {
+    "author": "Isaac Newton",
+    "tags": ["knowledge", "science"],
+    "medium": "letter",
+    "quote_content": "If I have done the public any service, it is due to my patient thought.",
+    "date": "1704-08-30",
+    "language": "English"
+  },
+  {
+    "author": "Franz Kafka",
+    "tags": ["existentialism", "society"],
+    "medium": "letter",
+    "quote_content": "In man's struggle against the world, bet on the world.",
+    "date": "1915-05-20",
+    "language": "German"
+  },
+  {
+    "author": "Gloria Anzaldúa",
+    "tags": ["identity", "borderlands"],
+    "medium": "essay",
+    "quote_content": "This is why the serpent that climbs out of the earth and flies into the sky is considered divine.",
+    "date": "1987-10-02",
+    "language": "English"
+  },
+  {
+    "author": "Goethe",
+    "tags": ["change", "growth"],
+    "medium": "book",
+    "quote_content": "Man knows only what he can do.",
+    "date": "1829-02-10",
+    "language": "German"
+  },
+  {
+    "author": "Octavio Paz",
+    "tags": ["poetry", "language"],
+    "medium": "speech",
+    "quote_content": "The word is born of the quest for meaning.",
+    "date": "1980-09-17",
+    "language": "Spanish"
+  },
+  {
+    "author": "Mark Twain",
+    "tags": ["humor", "wisdom"],
+    "medium": "book",
+    "quote_content": "The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.",
+    "date": "1884-07-04",
+    "language": "English"
+  },
+  {
+    "author": "Immanuel Kant",
+    "tags": ["philosophy", "ethics"],
+    "medium": "book",
+    "quote_content": "Two things awe me most, the starry sky above me and the moral law within me.",
+    "date": "1788-11-12",
+    "language": "German"
+  },
+  {
+    "author": "Antonio Machado",
+    "tags": ["poetry", "nature"],
+    "medium": "poem",
+    "quote_content": "Traveler, your footprints are the only road, nothing else. Traveler, there is no road; you make your own path as you walk.",
+    "date": "1903-05-29",
+    "language": "Spanish"
+  },
+  {
+    "author": "Rainer Maria Rilke",
+    "tags": ["love", "art"],
+    "medium": "letter",
+    "quote_content": "The purpose of life is to be defeated by greater and greater things.",
+    "date": "1907-08-22",
+    "language": "German"
+  },
+  {
+    "author": "Cervantes",
+    "tags": ["literature", "adventure"],
+    "medium": "book",
+    "quote_content": "When life itself seems lunatic, who knows where madness lies?",
+    "date": "1605-01-16",
+    "language": "Spanish"
+  },
+  {
+    "author": "Charles Darwin",
+    "tags": ["evolution", "adaptation"],
+    "medium": "book",
+    "quote_content": "A scientific man ought to have no wishes, no affections, - a mere heart of stone.",
+    "date": "1859-10-02",
+    "language": "English"
+  },
+  {
+    "author": "Johann Gottfried Herder",
+    "tags": ["language", "culture"],
+    "medium": "essay",
+    "quote_content": "Language is the archive of history.",
+    "date": "1772-11-14",
+    "language": "German"
+  },
+  {
+    "author": "Pablo Picasso",
+    "tags": ["art", "creativity"],
+    "medium": "interview",
+    "quote_content": "Every artist dips his brush in his own soul, and paints his own nature into his pictures.",
+    "date": "1955-06-08",
+    "language": "Spanish"
+  },
+  {
+    "author": "Virginia Woolf",
+    "tags": ["literature", "identity"],
+    "medium": "book",
+    "quote_content": "One cannot think well, love well, sleep well, if one has not dined well.",
+    "date": "1926-02-25",
+    "language": "English"
+  },
+  {
+    "author": "Hermann Hesse",
+    "tags": ["peace", "spirituality"],
+    "medium": "book",
+    "quote_content": "Words do not express thoughts very well. They always become a little different immediately after they are expressed, a little distorted, a little foolish.",
+    "date": "1922-11-10",
+    "language": "German"
+  },
+  {
+    "author": "Sor Juana Inez de la Cruz",
+    "tags": ["feminism", "knowledge"],
+    "medium": "poem",
+    "quote_content": "One can perfectly well philosophize while cooking supper.",
+    "date": "1692-07-08",
+    "language": "Spanish"
+  },
+  {
+    "author": "George Orwell",
+    "tags": ["freedom", "truth"],
+    "medium": "essay",
+    "quote_content": "In a time of deceit, telling the truth is a revolutionary act.",
+    "date": "1943-08-15",
+    "language": "English"
+  },
+  {
+    "author": "Rainer Maria Rilke",
+    "tags": ["solitude", "introspection"],
+    "medium": "letter",
+    "quote_content": "Be patient toward all that is unsolved in your heart and try to love the questions themselves.",
+    "date": "1903-06-23",
+    "language": "German"
+  },
+  {
+    "author": "Miguel de Unamuno",
+    "tags": ["faith", "philosophy"],
+    "medium": "book",
+    "quote_content": "A fanatic is one who can't change his mind and won't change the subject.",
+    "date": "1911-04-02",
+    "language": "Spanish"
+  },
+  {
+    "author": "Voltaire",
+    "tags": ["philosophy", "freedom"],
+    "medium": "book",
+    "quote_content": "Judge a man by his questions rather than by his answers.",
+    "date": "1762-12-10",
+    "language": "French"
+  },
+  {
+    "author": "Mariano José de Larra",
+    "tags": ["journalism", "satire"],
+    "medium": "essay",
+    "quote_content": "Man is the only animal that laughs and weeps; for he is the only animal that is struck with the difference between what things are, and what they ought to be.",
+    "date": "1834-05-07",
+    "language": "Spanish"
+  },
+  {
+    "author": "Jane Austen",
+    "tags": ["love", "relationships"],
+    "medium": "book",
+    "quote_content": "Friendship is certainly the finest balm for the pangs of disappointed love.",
+    "date": "1814-08-09",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["wisdom", "life"],
+    "medium": "letter",
+    "quote_content": "In nature we never see anything isolated, but everything in connection with something else which is before it, beside it, under it and over it.",
+    "date": "1787-10-05",
+    "language": "German"
+  },
+  {
+    "author": "Octavio Paz",
+    "tags": ["identity", "culture"],
+    "medium": "speech",
+    "quote_content": "Every vision is a joke until the first man accomplishes it; once realized, it becomes commonplace.",
+    "date": "1973-04-12",
+    "language": "Spanish"
+  },
+  {
+    "author": "Ernest Hemingway",
+    "tags": ["writing", "courage"],
+    "medium": "book",
+    "quote_content": "The first draft of anything is shit.",
+    "date": "1922-09-04",
+    "language": "English"
+  },
+  {
+    "author": "Friedrich Schiller",
+    "tags": ["beauty", "art"],
+    "medium": "letter",
+    "quote_content": "Grace is the beauty of form under the influence of freedom.",
+    "date": "1786-12-15",
+    "language": "German"
+  },
+  {
+    "author": "Gabriel García Márquez",
+    "tags": ["magic realism", "love"],
+    "medium": "book",
+    "quote_content": "It's enough for me to be sure that you and I exist at this moment.",
+    "date": "1985-11-20",
+    "language": "Spanish"
+  },
+  {
+    "author": "Charlotte Brontë",
+    "tags": ["love", "passion"],
+    "medium": "book",
+    "quote_content": "I avoid looking forward or backward, and try to keep looking upward.",
+    "date": "1847-11-20",
+    "language": "English"
+  },
+  {
+    "author": "Johann Wolfgang von Goethe",
+    "tags": ["music", "passion"],
+    "medium": "letter",
+    "quote_content": "The greatest happiness you can have is knowing that you do not necessarily require happiness.",
+    "date": "1815-02-10",
+    "language": "German"
+  },
+  {
+    "author": "Albert Einstein",
+    "tags": ["science", "imagination"],
+    "medium": "interview",
+    "quote_content": "The only source of knowledge is experience.",
+    "date": "1929-04-15",
+    "language": "English"
+  }
+]
