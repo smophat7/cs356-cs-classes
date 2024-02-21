@@ -1,0 +1,1011 @@
+[
+  {
+    "programTitle": "Computer Science",
+    "degreeLevel": "BS",
+    "variableCreditHourMin": "74",
+    "variableCreditHourMax": "75",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs that meet a human need.",
+      "Computational Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts.",
+      "Career Preparation": "Students will have sufficient maturity in computer science to work in a professional setting or enter a graduate program.",
+      "Diversity": "Equity and Inclusion Our program is accessible to everyone including women minorities and those new to programming and provides an equal opportunity for every student to succeed."
+    },
+    "requirementsOverview": [
+      "Computer science majors, especially those planning graduate work, are advised to acquire a strong background in mathematics, possibly a minor.",
+      "Personnel in the College of Physical and Mathematical Sciences Advisement Center will advise regarding core courses and suggested general education. Questions regarding curriculum and career decisions should be directed to the undergraduate advisor in the Computer Science Department.",
+      "Note: All hours of credit applied toward a major in computer science must be of C- or better and must be taken within eight years of declaring the computer science major. Any exceptions must be approved by the department. Students may choose to graduate under later requirements by updating their date of entry into the major at the college advisement center.",
+      "Note: No double counting is allowed within the major."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 11 Courses",
+        "description": "Core courses:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "06974-004", "comment": null },
+          { "courseGroupId": "13420-000", "comment": null },
+          { "courseGroupId": "01499-002", "comment": null },
+          { "courseGroupId": "13421-000", "comment": null },
+          { "courseGroupId": "11440-001", "comment": null },
+          { "courseGroupId": "10181-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 5 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03615-008", "comment": null },
+          { "courseGroupId": "13764-000", "comment": null },
+          { "courseGroupId": "13765-000", "comment": null },
+          { "courseGroupId": "04540-015", "comment": null },
+          { "courseGroupId": "01857-008", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 3 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "10923-002", "comment": null },
+          { "courseGroupId": "05604-032", "comment": null },
+          { "courseGroupId": "05620-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03616-004", "comment": null },
+          { "courseGroupId": "03605-008", "comment": null },
+          { "courseGroupId": "14184-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 5 - Complete 21 hours",
+        "description": "Complete 21.0 hours from the following option(s)",
+        "note": null,
+        "courses": [],
+        "options": [
+          {
+            "title": "Option 5.1 - Complete up to 21 hours",
+            "description": "Complete 12.0 to 21.0 hours from the following course(s)",
+            "note": "Note: If C S 401R or C S 501R is chosen, it must be taken for three hours.",
+            "courses": [
+              { "courseGroupId": "13780-000", "comment": null },
+              { "courseGroupId": "01500-001", "comment": null },
+              { "courseGroupId": "01513-003", "comment": null },
+              { "courseGroupId": "12329-002", "comment": null },
+              { "courseGroupId": "12328-001", "comment": null },
+              { "courseGroupId": "14034-000", "comment": null },
+              {
+                "courseGroupId": "10951-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "11187-001", "comment": null },
+              { "courseGroupId": "01512-003", "comment": null },
+              { "courseGroupId": "01510-000", "comment": null },
+              { "courseGroupId": "09201-001", "comment": null },
+              { "courseGroupId": "08102-002", "comment": null },
+              { "courseGroupId": "11823-000", "comment": null },
+              { "courseGroupId": "06774-000", "comment": null },
+              { "courseGroupId": "09202-000", "comment": null },
+              { "courseGroupId": "07626-002", "comment": null },
+              { "courseGroupId": "10117-000", "comment": null },
+              { "courseGroupId": "10321-000", "comment": null },
+              { "courseGroupId": "L4M3LZdHS1ASklCQe82y", "comment": null },
+              { "courseGroupId": "01526-002", "comment": null },
+              { "courseGroupId": "14035-000", "comment": null },
+              { "courseGroupId": "10322-004", "comment": null },
+              { "courseGroupId": "13781-000", "comment": null },
+              { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+              { "courseGroupId": "10952-003", "comment": null },
+              {
+                "courseGroupId": "10939-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "11441-002", "comment": null },
+              { "courseGroupId": "14084-000", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 5.2 - Complete up to 6 hours",
+            "description": "Courses can not double count between requirement 4 and option 5.2",
+            "note": null,
+            "courses": [
+              { "courseGroupId": "14033-000", "comment": null },
+              { "courseGroupId": "13855-000", "comment": null },
+              { "courseGroupId": "13856-000", "comment": null },
+              { "courseGroupId": "13857-000", "comment": null },
+              { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+              { "courseGroupId": "11295-000", "comment": null },
+              { "courseGroupId": "10179-002", "comment": null },
+              { "courseGroupId": "03616-004", "comment": null },
+              { "courseGroupId": "03605-008", "comment": null },
+              { "courseGroupId": "14184-000", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 5.3 - Complete up to 8 hours",
+            "description": "Complete up to 8.0 hours from the following course(s)",
+            "note": null,
+            "courses": [
+              { "courseGroupId": "12332-000", "comment": null },
+              { "courseGroupId": "07807-005", "comment": null },
+              { "courseGroupId": "14236-000", "comment": null },
+              { "courseGroupId": "11702-000", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 5.4 - Complete up to 9 hours",
+            "description": null,
+            "note": "Note: If C S 493R, C S 497R, C S 498R, or C S 501R is chosen, it must be taken for three credit hours.",
+            "courses": [
+              { "courseGroupId": "13941-000", "comment": null },
+              { "courseGroupId": "13942-000", "comment": null },
+              { "courseGroupId": "13943-000", "comment": null },
+              { "courseGroupId": "13944-000", "comment": null },
+              {
+                "courseGroupId": "13435-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "13422-000", "comment": null },
+              { "courseGroupId": "13423-000", "comment": null },
+              {
+                "courseGroupId": "13424-000",
+                "comment": "You may take up to 6.0 credit hours"
+              },
+              {
+                "courseGroupId": "12417-000",
+                "comment": "You may take up to 3.0 credit hours"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Requirement 6 - Obtain confirmation from your advisement center that you have completed the following:",
+        "description": "Complete Senior Exit Interview with the CS department during your last semester or term.",
+        "note": null,
+        "courses": [],
+        "options": []
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science Minor",
+    "overviewUrl": "https://catalog23byu.coursedog.com/programs/34712",
+    "degree_level": "MIN",
+    "variableCreditHourMin": "20",
+    "variableCreditHourMax": "21",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs using a combination of design, implementation, documentation, and testing.",
+      "Computational Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts.",
+      "Inclusion, Diversity, Equity": "Students experience a spirit of belonging and have access to the resources they need to succeed. All students are welcome, including those traditionally underrepresented in CS programs and those new to programming."
+    },
+    "requirementsOverview": [
+      "Grades below C- are not allowed in minor courses."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 4 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 6 hours",
+        "description": "Complete a total of 2 courses (6.0 credit hours) from the following groups.",
+        "note": null,
+        "courses": [],
+        "options": [
+          {
+            "title": "Option 2.1 - Complete at least 3 hours up to 6 hours",
+            "description": "Complete 1-2 elective courses (3-6 credit hours) from the following list:",
+            "note": "Note: If C S 201R, C S 301$, or C S 401R is chosen, it must be taken for three credit hours.",
+            "courses": [
+              { "courseGroupId": "14033-000", "comment": null },
+              {
+                "courseGroupId": "12529-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "06974-004", "comment": null },
+              { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+              { "courseGroupId": "13420-000", "comment": null },
+              {
+                "courseGroupId": "11439-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "01499-002", "comment": null },
+              { "courseGroupId": "13421-000", "comment": null },
+              { "courseGroupId": "13780-000", "comment": null },
+              { "courseGroupId": "01500-001", "comment": null },
+              { "courseGroupId": "11440-001", "comment": null },
+              { "courseGroupId": "01513-003", "comment": null },
+              { "courseGroupId": "12329-002", "comment": null },
+              { "courseGroupId": "12328-001", "comment": null },
+              { "courseGroupId": "14034-000", "comment": null },
+              {
+                "courseGroupId": "10951-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "11187-001", "comment": null },
+              { "courseGroupId": "01512-003", "comment": null },
+              { "courseGroupId": "01510-000", "comment": null },
+              { "courseGroupId": "09201-001", "comment": null },
+              { "courseGroupId": "08102-002", "comment": null },
+              { "courseGroupId": "11823-000", "comment": null },
+              { "courseGroupId": "06774-000", "comment": null },
+              { "courseGroupId": "09202-000", "comment": null },
+              { "courseGroupId": "07626-002", "comment": null },
+              { "courseGroupId": "10117-000", "comment": null },
+              { "courseGroupId": "10321-000", "comment": null },
+              { "courseGroupId": "L4M3LZdHS1ASklCQe82y", "comment": null },
+              { "courseGroupId": "01526-002", "comment": null },
+              { "courseGroupId": "14035-000", "comment": null },
+              { "courseGroupId": "10322-004", "comment": null },
+              { "courseGroupId": "13781-000", "comment": null },
+              { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+              { "courseGroupId": "10952-003", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 2.2 - Complete 1 of 2 Courses",
+            "description": null,
+            "note": null,
+            "courses": [
+              { "courseGroupId": "10178-002", "comment": null },
+              { "courseGroupId": "srHJV2UeJBpRJrZHrf0y", "comment": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science: Bioinformatics",
+    "degree_level": "BS",
+    "variableCreditHourMin": "79",
+    "variableCreditHourMax": "81",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs that meet a human need and will develop expertise in bioinformatics. See the Computer Science BS program for general assessments shared across all emphases.",
+      "Computational and Biological Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts from computer science and biology.See the Computer Science BS program for general assessments shared across all emphases.",
+      "Career Preparation": "Students will have sufficient maturity in computer science to work in a professional setting in computer science or bioinformatics or to enter a graduate program.See the Computer Science BS program for general assessments shared across all emphases.",
+      "Diversity, Equity and Inclusion ": "Our program is accessible to everyone including women minorities and those new to programming and provides an equal opportunity for every student to succeed.See the Computer Science BS program for general assessments shared across all emphases."
+    },
+    "requirementsOverview": [
+      "Personnel in the College of Physical and Mathematical Sciences Advisement Center will advise regarding core courses and suggested general education. Questions regarding curriculum and career decisions should be directed to the undergraduate advisor in the Computer Science Department.",
+      "Note: All hours of credit applied toward a major in computer science must be of C- or better and must be taken within eight years of declaring the computer science major. Any exceptions must be approved by the department. Students may choose to graduate under later requirements by updating their date of entry into the major at the college advisement center."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 -Complete 8 Courses",
+        "description": "Computer Science core:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "01499-002", "comment": null },
+          { "courseGroupId": "13421-000", "comment": null },
+          { "courseGroupId": "10181-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 -Complete 7 Courses",
+        "description": "Biology core:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "12064-000", "comment": null },
+          { "courseGroupId": "11911-000", "comment": null },
+          { "courseGroupId": "14097-000", "comment": null },
+          { "courseGroupId": "14099-000", "comment": null },
+          { "courseGroupId": "10672-004", "comment": null },
+          { "courseGroupId": "09975-002", "comment": null },
+          { "courseGroupId": "09976-002", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 3 -Complete 5 Courses",
+        "description": "Supporting courses:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "01016-020", "comment": null },
+          { "courseGroupId": "03615-008", "comment": null },
+          { "courseGroupId": "13764-000", "comment": null },
+          { "courseGroupId": "13765-000", "comment": null },
+          { "courseGroupId": "01857-008", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 4 -Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "13600-000", "comment": null },
+          { "courseGroupId": "10660-001", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 5 -Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "13781-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 6 -Complete 12 hours",
+        "description": "Courses will not double count between Requirement 5 and Requirement 6.",
+        "note": null,
+        "courses": [],
+        "options": [
+          {
+            "title": "Option 6.1 -Complete at least 6 hours up to 12 hours",
+            "description": "Complete up to 12 hours from the following courses",
+            "note": null,
+            "courses": [
+              { "courseGroupId": "11759-000", "comment": null },
+              { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+              { "courseGroupId": "13420-000", "comment": null },
+              { "courseGroupId": "13780-000", "comment": null },
+              { "courseGroupId": "01500-001", "comment": null },
+              { "courseGroupId": "01513-003", "comment": null },
+              { "courseGroupId": "12329-002", "comment": null },
+              { "courseGroupId": "12328-001", "comment": null },
+              { "courseGroupId": "14034-000", "comment": null },
+              {
+                "courseGroupId": "10951-000",
+                "comment": "You may take up to 3.0 credit hours"
+              },
+              { "courseGroupId": "11295-000", "comment": null },
+              { "courseGroupId": "11187-001", "comment": null },
+              { "courseGroupId": "01512-003", "comment": null },
+              { "courseGroupId": "01510-000", "comment": null },
+              { "courseGroupId": "09201-001", "comment": null },
+              { "courseGroupId": "08102-002", "comment": null },
+              { "courseGroupId": "11823-000", "comment": null },
+              { "courseGroupId": "06774-000", "comment": null },
+              { "courseGroupId": "09202-000", "comment": null },
+              { "courseGroupId": "07626-002", "comment": null },
+              { "courseGroupId": "10117-000", "comment": null },
+              { "courseGroupId": "10321-000", "comment": null },
+              { "courseGroupId": "01526-002", "comment": null },
+              { "courseGroupId": "14035-000", "comment": null },
+              { "courseGroupId": "10322-004", "comment": null },
+              { "courseGroupId": "13781-000", "comment": null },
+              { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+              { "courseGroupId": "13941-000", "comment": null },
+              { "courseGroupId": "13942-000", "comment": null },
+              { "courseGroupId": "13943-000", "comment": null },
+              { "courseGroupId": "13944-000", "comment": null },
+              { "courseGroupId": "10952-003", "comment": null },
+              { "courseGroupId": "11441-002", "comment": null },
+              { "courseGroupId": "14084-000", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 6.2 -Complete up to 6 hours",
+            "description": null,
+            "note": null,
+            "courses": [
+              {
+                "courseGroupId": "13424-000",
+                "comment": "You may take up to 6.0 credit hours"
+              },
+              {
+                "courseGroupId": "12417-000",
+                "comment": "You may take up to 3.0 credit hours"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Requirement 7 - Obtain confirmation from your advisement center that you have completed the following:",
+        "description": "Complete Senior Exit Interview with the CS department during your last semester or term.",
+        "note": null,
+        "courses": [],
+        "options": []
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science Teaching Minor",
+    "degree_level": "MIN",
+    "variableCreditHourMin": "22",
+    "variableCreditHourMax": "22",
+    "learningOutcomes": {},
+    "requirementsOverview": [
+      "Licensure: This program meets the educational requirements designed to lead to an occupationally required professional license or certificate in the state of Utah. Students pursuing occupations requiring a license or certificate in a state other than Utah should contact the appropriate BYU academic advisement center as well as the licensing agency in the state where they intend to work to seek information and guidance regarding licensure and certification requirements.",
+      "This minor is designed to prepare students to teach in public schools. A teaching minor may only be received by students graduating with a teaching major. In order to graduate with this minor, students are required to complete Utah State Office of Education licensing requirements. To view these requirements go to https://www.schools.utah.gov/curr/licensing or contact the Education Advisement Center, 350 MCKB, 801-422-3426.",
+      "For students accepted into the major after December 16, 2019, grades below C in any required coursework in a teaching major or teaching minor will not be accepted. Teacher candidates must maintain a cumulative GPA of 2.7 or higher once admitted into the program and to qualify for student teaching. For additional details on admission and retention requirements for teaching majors and teaching minors, see Educator Preparation Program Requirements in the Undergraduate Catalog."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 6 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "03140-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 1 Course",
+        "description": "FBI fingerprinting and background clearance must be completed.",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "13460-000", "comment": "You may take once" }
+        ],
+        "options": []
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science: Machine Learning",
+    "degree_level": "BS",
+    "variableCreditHourMin": "74",
+    "variableCreditHourMax": "74",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs that meet a human need.",
+      "Computational Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts.",
+      "Career Preparation": "Students will have sufficient maturity in machine learning to work in a professional setting or enter a graduate program.",
+      "Diversity, Equity, and Inclusion": "Our program is accessible to everyone, including women, minorities, and those new to programming, and provides an equal opportunity for every student to succeed."
+    },
+    "requirementsOverview": [
+      "Grades below C- are not allowed in major courses.",
+      "Note: Math 112, Math 113, Phscs 121, Engl 316, and C S 312 can be used to fill both General Education and program requirements. Advanced Writing and Oral Communication: Engl 316. Quantitative Reasoning: Math 112 or 113. Languages of Learning: Math 112 or 113. Physical Science: C S 312 or Phscs 121."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 10 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "14033-000", "comment": null },
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "01499-002", "comment": null },
+          { "courseGroupId": "10181-000", "comment": null },
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "13781-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03615-008", "comment": null },
+          { "courseGroupId": "03605-008", "comment": null },
+          { "courseGroupId": "14195-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 3 - Complete 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "13764-000", "comment": null },
+          { "courseGroupId": "13765-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "05604-032", "comment": null },
+          { "courseGroupId": "05620-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 5 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "01580-001", "comment": null },
+          { "courseGroupId": "14184-000", "comment": null },
+          { "courseGroupId": "11842-001", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 6 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "11187-001", "comment": null },
+          { "courseGroupId": "08670-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 7 - Complete 2 of 4 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "09201-001", "comment": null },
+          { "courseGroupId": "01526-002", "comment": null },
+          { "courseGroupId": "14035-000", "comment": null },
+          { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 8 - Complete 6 hours",
+        "description": null,
+        "note": null,
+        "courses": [],
+        "options": [
+          {
+            "title": "Option 8.1 - Complete up to 6 hours",
+            "description": null,
+            "note": null,
+            "courses": [
+              { "courseGroupId": "13943-000", "comment": null },
+              { "courseGroupId": "13944-000", "comment": null }
+            ]
+          },
+          {
+            "title": "Option 8.2 - Complete up to 6 hours",
+            "description": "If you complete this option you must take two semesters, totaling 6.0 credits",
+            "note": null,
+            "courses": [
+              { "courseGroupId": "13424-000", "comment": "You may take twice" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Requirement 9 - Complete 9 hours",
+        "description": "Courses taken to fulfill Requirements 6 and 7 cannot double count here",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "11187-001", "comment": null },
+          { "courseGroupId": "09201-001", "comment": null },
+          { "courseGroupId": "08102-002", "comment": null },
+          { "courseGroupId": "11823-000", "comment": null },
+          { "courseGroupId": "01526-002", "comment": null },
+          { "courseGroupId": "14035-000", "comment": null },
+          { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+          { "courseGroupId": "11441-002", "comment": null },
+          { "courseGroupId": "14084-000", "comment": null },
+          { "courseGroupId": "01572-002", "comment": null },
+          { "courseGroupId": "10156-000", "comment": null },
+          { "courseGroupId": "03616-004", "comment": null },
+          { "courseGroupId": "03630-004", "comment": null },
+          { "courseGroupId": "13766-000", "comment": null },
+          { "courseGroupId": "10923-002", "comment": null },
+          { "courseGroupId": "11840-001", "comment": null },
+          { "courseGroupId": "11433-002", "comment": null },
+          { "courseGroupId": "11843-001", "comment": null },
+          { "courseGroupId": "14244-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 10 - Obtain confirmation from your advisement center that you have completed the following:",
+        "description": "Complete Senior Exit Interview with the Computer Science department during last semester or term.",
+        "note": null,
+        "courses": [],
+        "options": []
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science: Software Engineering",
+    "degree_level": "BS",
+    "variableCreditHourMin": "74",
+    "variableCreditHourMax": "76",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs using a combination of design, implementation, documentation, and testing.",
+      "Computational Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts.",
+      "Diversity, Equity, and Inclusion": "Students experience a spirit of belonging and have access to the resources they need to succeed. All students are welcome, including those traditionally underrepresented in CS programs and those new to programming.",
+      "Career Preparation": "Students will have sufficient maturity in computer science to work in a professional setting in computer science or software engineering or to enter a graduate program."
+    },
+    "requirementsOverview": [
+      "Grades below C- are not allowed in major courses.",
+      "Note: Math 112, Math 113, Phscs 121, WRTG 316, and C S 312 can be used to fill both General Education and program requirements. Advanced Writing and Oral Communication: WRTG 316. Quantitative Reasoning: Math 112 or 113. Languages of Learning: Math 112 or 113. Physical Science: C S 312 or Phscs 121."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 17 Courses",
+        "description": "Core courses:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "13855-000", "comment": null },
+          { "courseGroupId": "13856-000", "comment": null },
+          { "courseGroupId": "13857-000", "comment": null },
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "13420-000", "comment": null },
+          { "courseGroupId": "01499-002", "comment": null },
+          { "courseGroupId": "13421-000", "comment": null },
+          { "courseGroupId": "13780-000", "comment": null },
+          { "courseGroupId": "11440-001", "comment": null },
+          { "courseGroupId": "10181-000", "comment": null },
+          { "courseGroupId": "08102-002", "comment": null },
+          { "courseGroupId": "13941-000", "comment": null },
+          { "courseGroupId": "13942-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 4 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03615-008", "comment": null },
+          { "courseGroupId": "13764-000", "comment": null },
+          { "courseGroupId": "13765-000", "comment": null },
+          { "courseGroupId": "04540-015", "comment": null },
+          { "courseGroupId": "01857-008", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 3 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "05604-032", "comment": null },
+          { "courseGroupId": "05620-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03616-004", "comment": null },
+          { "courseGroupId": "03605-008", "comment": null },
+          { "courseGroupId": "14184-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 5 - Complete 2 of 11 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+          { "courseGroupId": "01500-001", "comment": null },
+          { "courseGroupId": "01513-003", "comment": null },
+          { "courseGroupId": "12328-001", "comment": null },
+          { "courseGroupId": "11823-000", "comment": null },
+          { "courseGroupId": "09202-000", "comment": null },
+          { "courseGroupId": "07626-002", "comment": null },
+          { "courseGroupId": "10117-000", "comment": null },
+          { "courseGroupId": "10321-000", "comment": null },
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "10952-003", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 6 - Complete 1 of 38 Courses",
+        "description": "Courses will not double count between Requirement 5 and Requirement 6.",
+        "note": "Note: If C S 493R, C S 498R, or C S 501R is chosen, it must be taken for 3 credit hours.",
+        "courses": [
+          { "courseGroupId": "06974-004", "comment": null },
+          { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+          { "courseGroupId": "01500-001", "comment": null },
+          { "courseGroupId": "01513-003", "comment": null },
+          { "courseGroupId": "12329-002", "comment": null },
+          { "courseGroupId": "12328-001", "comment": null },
+          { "courseGroupId": "14034-000", "comment": null },
+          {
+            "courseGroupId": "10951-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          { "courseGroupId": "11295-000", "comment": null },
+          { "courseGroupId": "11187-001", "comment": null },
+          { "courseGroupId": "09201-001", "comment": null },
+          { "courseGroupId": "11823-000", "comment": null },
+          { "courseGroupId": "06774-000", "comment": null },
+          { "courseGroupId": "09202-000", "comment": null },
+          { "courseGroupId": "07626-002", "comment": null },
+          { "courseGroupId": "10117-000", "comment": null },
+          { "courseGroupId": "10321-000", "comment": null },
+          { "courseGroupId": "L4M3LZdHS1ASklCQe82y", "comment": null },
+          { "courseGroupId": "01526-002", "comment": null },
+          { "courseGroupId": "14035-000", "comment": null },
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "13781-000", "comment": null },
+          { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+          { "courseGroupId": "10952-003", "comment": null },
+          {
+            "courseGroupId": "13435-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          {
+            "courseGroupId": "13424-000",
+            "comment": "You may take up to 6.0 credit hours"
+          },
+          {
+            "courseGroupId": "12417-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          {
+            "courseGroupId": "10939-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          { "courseGroupId": "11441-002", "comment": null },
+          { "courseGroupId": "14084-000", "comment": null },
+          { "courseGroupId": "09761-006", "comment": null },
+          { "courseGroupId": "01688-005", "comment": null },
+          { "courseGroupId": "12215-001", "comment": null },
+          { "courseGroupId": "03659-000", "comment": null },
+          { "courseGroupId": "10923-002", "comment": null },
+          { "courseGroupId": "11702-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 7 - Obtain confirmation from your advisement center that you have completed the following:",
+        "description": "Complete Senior Exit interview with the C S department during last semester or term.",
+        "note": null,
+        "courses": [],
+        "options": []
+      }
+    ]
+  },
+  {
+    "programTitle": "Computer Science: Animation and Games",
+    "degree_level": "BS",
+    "variableCreditHourMin": "77",
+    "variableCreditHourMax": "81.5",
+    "learningOutcomes": {
+      "Computational Practice": "Students will design and implement significant computer programs that meet a human need and will develop expertise in animation. See the Computer Science BS program for general assessments shared across all emphases.",
+      "Computational Theory": "Students will analyze problems and their algorithmic solutions using theoretical concepts.See the Computer Science BS program for general assessments shared across all emphases.",
+      "Career Preparation": "Students will have sufficient maturity in computer science to work in a professional setting in computer science or animation or to enter a graduate program.See the Computer Science BS program for general assessments shared across all emphases."
+    },
+    "requirementsOverview": [
+      "Grades below C- are not allowed in major courses."
+    ],
+    "requirements": [
+      {
+        "title": "Requirement 1 - Complete 4 Courses",
+        "description": "Prerequisites Courses:",
+        "note": "Be admitted to the program.",
+        "courses": [
+          { "courseGroupId": "14243-000", "comment": null },
+          { "courseGroupId": "10648-000", "comment": null },
+          { "courseGroupId": "11930-002", "comment": null },
+          { "courseGroupId": "13819-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 2 - Complete 8 Courses",
+        "description": "Complete the following after being admitted to the program:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "10178-002", "comment": null },
+          { "courseGroupId": "10649-000", "comment": null },
+          { "courseGroupId": "09200-000", "comment": null },
+          { "courseGroupId": "01499-002", "comment": null },
+          { "courseGroupId": "13421-000", "comment": null },
+          { "courseGroupId": "12329-002", "comment": null },
+          { "courseGroupId": "06774-000", "comment": null },
+          { "courseGroupId": "10531-003", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 3 - Complete 5 Courses",
+        "description": "Supporting Courses:",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03615-008", "comment": null },
+          { "courseGroupId": "13764-000", "comment": null },
+          { "courseGroupId": "13765-000", "comment": null },
+          { "courseGroupId": "04540-015", "comment": null },
+          { "courseGroupId": "01857-008", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 4 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "05604-032", "comment": null },
+          { "courseGroupId": "05620-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 5 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "03616-004", "comment": null },
+          { "courseGroupId": "03605-008", "comment": null },
+          { "courseGroupId": "14184-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 6 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "14032-000", "comment": null },
+          { "courseGroupId": "11932-002", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 7 - Complete 1 of 2 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "10181-000", "comment": null },
+          { "courseGroupId": "11944-001", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 8 - Complete 6 hours",
+        "description": "- You may take once ",
+        "note": null,
+        "courses": [
+          { "courseGroupId": "12733-000", "comment": "You may take once" },
+          { "courseGroupId": "10991-003", "comment": "You may take once" },
+          { "courseGroupId": "10992-003", "comment": "You may take once" },
+          { "courseGroupId": "11937-004", "comment": "You may take once" },
+          { "courseGroupId": "13772-000", "comment": "You may take once" }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 9 - Complete 2 of 28 Courses",
+        "description": null,
+        "note": "Note: If C S 401R is chosen, it must be taken for three hours.",
+        "courses": [
+          { "courseGroupId": "06974-004", "comment": null },
+          { "courseGroupId": "OrDuSOiqhvX4Rz3I3WJr", "comment": null },
+          { "courseGroupId": "13420-000", "comment": null },
+          { "courseGroupId": "13780-000", "comment": null },
+          { "courseGroupId": "01500-001", "comment": null },
+          { "courseGroupId": "11440-001", "comment": null },
+          { "courseGroupId": "01513-003", "comment": null },
+          { "courseGroupId": "12328-001", "comment": null },
+          { "courseGroupId": "14034-000", "comment": null },
+          {
+            "courseGroupId": "10951-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          { "courseGroupId": "11187-001", "comment": null },
+          { "courseGroupId": "01512-003", "comment": null },
+          { "courseGroupId": "01510-000", "comment": null },
+          { "courseGroupId": "09201-001", "comment": null },
+          { "courseGroupId": "08102-002", "comment": null },
+          { "courseGroupId": "11823-000", "comment": null },
+          { "courseGroupId": "09202-000", "comment": null },
+          { "courseGroupId": "07626-002", "comment": null },
+          { "courseGroupId": "10117-000", "comment": null },
+          { "courseGroupId": "10321-000", "comment": null },
+          { "courseGroupId": "L4M3LZdHS1ASklCQe82y", "comment": null },
+          { "courseGroupId": "01526-002", "comment": null },
+          { "courseGroupId": "14035-000", "comment": null },
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "13781-000", "comment": null },
+          { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+          { "courseGroupId": "10952-003", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 10 - Complete 2 of 37 Courses",
+        "description": "Courses used to fulfill Requirements 6, 8 and 9 cannot be double counted here. Note: If C S 401R, C S 498R, or C S 501R is chosen, it must be taken for three hours.",
+        "note": null,
+        "courses": [
+          {
+            "courseGroupId": "10951-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          { "courseGroupId": "11187-001", "comment": null },
+          { "courseGroupId": "01512-003", "comment": null },
+          { "courseGroupId": "01510-000", "comment": null },
+          { "courseGroupId": "09201-001", "comment": null },
+          { "courseGroupId": "08102-002", "comment": null },
+          { "courseGroupId": "11823-000", "comment": null },
+          { "courseGroupId": "09202-000", "comment": null },
+          { "courseGroupId": "07626-002", "comment": null },
+          { "courseGroupId": "10117-000", "comment": null },
+          { "courseGroupId": "10321-000", "comment": null },
+          { "courseGroupId": "L4M3LZdHS1ASklCQe82y", "comment": null },
+          { "courseGroupId": "01526-002", "comment": null },
+          { "courseGroupId": "14035-000", "comment": null },
+          { "courseGroupId": "10322-004", "comment": null },
+          { "courseGroupId": "13781-000", "comment": null },
+          { "courseGroupId": "5oKtVHJxYCPgzKH8922E", "comment": null },
+          { "courseGroupId": "10952-003", "comment": null },
+          {
+            "courseGroupId": "12417-000",
+            "comment": "You may take up to 3.0 credit hours"
+          },
+          { "courseGroupId": "11910-008", "comment": null },
+          { "courseGroupId": "11441-002", "comment": null },
+          { "courseGroupId": "14084-000", "comment": null },
+          { "courseGroupId": "x6bwLatZvyYJSLiU4ZHf", "comment": null },
+          { "courseGroupId": "10533-002", "comment": null },
+          { "courseGroupId": "11647-004", "comment": null },
+          { "courseGroupId": "14031-000", "comment": null },
+          { "courseGroupId": "14032-000", "comment": null },
+          { "courseGroupId": "14216-000", "comment": null },
+          { "courseGroupId": "11932-002", "comment": null },
+          { "courseGroupId": "11933-002", "comment": null },
+          { "courseGroupId": "10992-003", "comment": "You may take once" },
+          { "courseGroupId": "11935-002", "comment": null },
+          { "courseGroupId": "11936-002", "comment": null },
+          { "courseGroupId": "12734-000", "comment": "You may take once" },
+          { "courseGroupId": "01688-005", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 11 - Complete 1 of 3 Courses",
+        "description": null,
+        "note": null,
+        "courses": [
+          { "courseGroupId": "06809-009", "comment": null },
+          { "courseGroupId": "08881-002", "comment": null },
+          { "courseGroupId": "10404-000", "comment": null }
+        ],
+        "options": []
+      },
+      {
+        "title": "Requirement 12 - Obtain confirmation from your advisement center that you have completed the following:",
+        "description": "Complete Senior Exit interview with the CS department during your last semester or term.",
+        "note": null,
+        "courses": [],
+        "options": []
+      }
+    ]
+  }
+]
