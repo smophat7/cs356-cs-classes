@@ -42,6 +42,8 @@ export default function App() {
   useEffect(() => {
     setCourses(rawCourses as Course[]);
     setPrograms(rawPrograms as Program[]);
+    console.log(courses);
+    console.log(programs);
   }, []);
 
   useEffect(() => {
