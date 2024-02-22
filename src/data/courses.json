@@ -14015,6 +14015,141 @@
     "allowIntegration": false
   },
   {
+    "_id": "12215-001-2023-09-05",
+    "archived": true,
+    "campus": "",
+    "campuses": [],
+    "career": "Yes",
+    "cipCode": "",
+    "code": "IT&C 567",
+    "college": "Ira A. Fulton College of Engineering",
+    "consent": "No",
+    "courseDependents": [],
+    "courseGroupId": "12215-001",
+    "courseNumber": "567",
+    "courseTypicallyOffered": "Fall and Winter",
+    "createdAt": 1676898234031,
+    "credits": {
+      "creditHours": { "min": 3, "value": 3, "operator": "" },
+      "lectureHours": { "value": 2, "operator": "" },
+      "labHours": { "value": 3, "operator": "" }
+    },
+    "customFields": {
+      "curriculumId": "12215",
+      "titleCode": "001",
+      "courseType": "C - Combined Lecture and Activity",
+      "teachingArea": "IT&C",
+      "mXQpZ": "We propose new learning outcomes that better align with the goals of the class:\n\nPlan and scope a penetration testing engagement.\nUnderstand legal and compliance requirements.\nUse appropriate tools and techniques to perform and analyze scans and tests.\nEffectively communicate results and propose remediation techniques.\nChange prerequisite for IS program to IS 414. The content in IS 414 is sufficient to prepare students for this class.",
+      "9fzcu": "Required",
+      "NO4xd": false,
+      "typeofchange": "Updating (No new Curriculum IC/TC)",
+      "lastSyncd": 1683640868508
+    },
+    "departments": ["1130"],
+    "dependents": [],
+    "description": "Advanced computer systems security.  Vulnerabilities and exploits.  System and network attacks.  Ethical hacking and penetration testing.  Cyber security, cyber weapons, and advanced persistent threats.  Legal and regulatory requirements for security and privacy.",
+    "designation": "",
+    "division": "",
+    "dropConsent": "",
+    "dynamicClassDateRule": "",
+    "effectiveEndDate": "2999-12-31",
+    "effectiveStartDate": "2023-09-05",
+    "endTerm": { "id": "29995" },
+    "equivalentCourseGroup": "",
+    "gradeMode": "Grade Rule 8: A, B, C, D, E, I (Standard grade rule)",
+    "gradedComponent": "",
+    "hegisCode": "",
+    "id": "12215-001-2023-09-05",
+    "instructionMode": "",
+    "instructionalMethods": [],
+    "instructorEdit": "",
+    "lastEditedAt": 1697205639992,
+    "learningOutcomes": [
+      {
+        "name": "Conduct Penetration Test",
+        "objective": "Plan and scope a cybersecurity penetration testing engagement.",
+        "tags": ["181183", "0", "0", "2023-08-26 08:34:16"],
+        "activity": "",
+        "assessment": "",
+        "justification": ""
+      },
+      {
+        "name": "Legal requirements",
+        "objective": "Apply legal and compliance requirements to cybersecurity audits, implementations, and situations.",
+        "tags": ["181160", "0", "1", "2023-08-26 08:34:16"],
+        "activity": "",
+        "assessment": "",
+        "justification": ""
+      },
+      {
+        "name": "Tools and techniques",
+        "objective": "Use appropriate tools and techniques to perform and analyze scans and tests.",
+        "tags": ["181044", "0", "2", "2023-08-26 08:34:16"],
+        "activity": "",
+        "assessment": "",
+        "justification": ""
+      },
+      {
+        "name": "Communicate results and remediation",
+        "objective": "Effectively communicate results and propose remediation techniques.",
+        "tags": ["181210", "0", "3", "2023-08-26 08:34:16"],
+        "activity": "",
+        "assessment": "",
+        "justification": ""
+      }
+    ],
+    "location": "",
+    "longName": "Cybersecurity and Penetration Testing",
+    "name": "Cybersecurity & Pen Test",
+    "notes": "",
+    "primaryComponent": "",
+    "programDependents": [],
+    "registrationMode": "",
+    "requirementDesignation": "",
+    "requirementGroup": "",
+    "requirementLevels": [],
+    "requisites": {
+      "requisitesSimple": [
+        {
+          "id": "aWGgHrUL",
+          "name": "Prerequisites",
+          "type": "Completion Requirement",
+          "showInCatalog": false,
+          "rules": [
+            {
+              "id": "nBxFP0LW",
+              "condition": "completedAnyOf",
+              "value": {
+                "condition": "courses",
+                "values": [
+                  {
+                    "value": ["11207-002", "10321-000", "11289-003"],
+                    "logic": "or"
+                  }
+                ],
+                "id": "rd9bYOnl",
+                "subSelections": []
+              }
+            }
+          ],
+          "sisId": ""
+        }
+      ]
+    },
+    "rolloverSetting": "",
+    "scheduleDisplayName": "",
+    "startTerm": { "semester": 5, "year": "2023-24", "id": "2023-24-5" },
+    "status": "Active",
+    "subjectCode": "IT&C",
+    "topics": [],
+    "tuitionGroup": "",
+    "type": "",
+    "version": 5,
+    "createdBy": "dataengineers@coursedog.com",
+    "lastEditedBy": "byucoursedog@byu.edu",
+    "allowIntegration": false
+  },
+  {
     "_id": "10156-000",
     "archived": false,
     "campuses": [],
