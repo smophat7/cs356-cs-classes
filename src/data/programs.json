@@ -187,7 +187,7 @@
     "programTitle": "Computer Science Minor",
     "programGroupId": "34711",
     "overviewUrl": "https://catalog23byu.coursedog.com/programs/34712",
-    "degree_level": "MIN",
+    "degreeLevel": "MIN",
     "variableCreditHourMin": "20",
     "variableCreditHourMax": "21",
     "learningOutcomes": {
@@ -283,7 +283,7 @@
   {
     "programTitle": "Computer Science: Bioinformatics",
     "programGroupId": "34713",
-    "degree_level": "BS",
+    "degreeLevel": "BS",
     "variableCreditHourMin": "79",
     "variableCreditHourMax": "81",
     "learningOutcomes": {
@@ -440,7 +440,7 @@
   {
     "programTitle": "Computer Science Teaching Minor",
     "programGroupId": "34710",
-    "degree_level": "MIN",
+    "degreeLevel": "MIN",
     "variableCreditHourMin": "22",
     "variableCreditHourMax": "22",
     "learningOutcomes": {},
@@ -478,7 +478,7 @@
   {
     "programTitle": "Computer Science: Machine Learning",
     "programGroupId": "34716",
-    "degree_level": "BS",
+    "degreeLevel": "BS",
     "variableCreditHourMin": "74",
     "variableCreditHourMax": "74",
     "learningOutcomes": {
@@ -638,7 +638,7 @@
   {
     "programTitle": "Computer Science: Software Engineering",
     "programGroupId": "34717",
-    "degree_level": "BS",
+    "degreeLevel": "BS",
     "variableCreditHourMin": "74",
     "variableCreditHourMax": "76",
     "learningOutcomes": {
@@ -801,7 +801,7 @@
   {
     "programTitle": "Computer Science: Animation and Games",
     "programGroupId": "34714",
-    "degree_level": "BS",
+    "degreeLevel": "BS",
     "variableCreditHourMin": "77",
     "variableCreditHourMax": "81.5",
     "learningOutcomes": {

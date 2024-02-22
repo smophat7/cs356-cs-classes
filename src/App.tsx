@@ -4,6 +4,7 @@ import { theme } from "./theme";
 import rawQuotes from "./data/quotes.json";
 import rawCategorizations from "./data/tagCategories.json";
 import rawCourses from "./data/courses.json";
+import rawPrograms from "./data/programs.json";
 import {
   TopLevelCategory,
   RawCategorizations,
@@ -16,6 +17,7 @@ import { RouteEndpoints } from "./types/RouteEndpoints";
 import { AppHeader, AppRoutes, CategoryNavbar } from "./components";
 import { useEffect, useState } from "react";
 import { Course } from "./types/Course";
+import { Program } from "./types/Program";
 
 export default function App() {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
@@ -35,9 +37,11 @@ export default function App() {
   const [authors, setAuthors] = useState<string[]>([]);
   const [languages, setLanguages] = useState<string[]>([]);
   const [courses, setCourses] = useState<Course[]>([]);
+  const [programs, setPrograms] = useState<Program[]>([]);
 
   useEffect(() => {
     setCourses(rawCourses as Course[]);
+    setPrograms(rawPrograms as Program[]);
   }, []);
 
   useEffect(() => {
