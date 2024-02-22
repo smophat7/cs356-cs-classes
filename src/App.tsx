@@ -3,6 +3,7 @@ import { AppShell, MantineProvider } from "@mantine/core";
 import { theme } from "./theme";
 import rawQuotes from "./data/quotes.json";
 import rawCategorizations from "./data/tagCategories.json";
+import rawCourses from "./data/courses.json";
 import {
   TopLevelCategory,
   RawCategorizations,
@@ -14,6 +15,7 @@ import { Quote } from "./types/Quote";
 import { RouteEndpoints } from "./types/RouteEndpoints";
 import { AppHeader, AppRoutes, CategoryNavbar } from "./components";
 import { useEffect, useState } from "react";
+import { Course } from "./types/Course";
 
 export default function App() {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
@@ -32,6 +34,11 @@ export default function App() {
   const [tags, setTags] = useState<string[]>([]);
   const [authors, setAuthors] = useState<string[]>([]);
   const [languages, setLanguages] = useState<string[]>([]);
+  const [courses, setCourses] = useState<Course[]>([]);
+
+  useEffect(() => {
+    setCourses(rawCourses as Course[]);
+  }, []);
 
   useEffect(() => {
     setQuotes(rawQuotes.map(convertToQuote));
