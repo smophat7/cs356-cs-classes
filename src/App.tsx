@@ -42,9 +42,15 @@ export default function App() {
   useEffect(() => {
     setCourses(rawCourses as Course[]);
     setPrograms(rawPrograms as Program[]);
-    console.log(courses);
-    console.log(programs);
   }, []);
+
+  // temporary logging to see the data
+  useEffect(() => {
+    if (courses.length !== 0 || programs.length !== 0) {
+      console.log(courses);
+      console.log(programs);
+    }
+  }, [courses, programs]);
 
   useEffect(() => {
     setQuotes(rawQuotes.map(convertToQuote));
