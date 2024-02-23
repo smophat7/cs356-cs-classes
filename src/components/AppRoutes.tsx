@@ -1,48 +1,23 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Subcategory, TopLevelCategory } from "../types/Categories";
-import { Quote } from "../types/Quote";
-import {
-  QuotesViewAccordion,
-  QuotesViewFiltered,
-  QuotesViewSubcategory,
-} from "../views";
+import { CoursesViewFiltered } from "../views";
+import { Course } from "../types/Course";
+import { Program } from "../types/Program";
 
 type Props = {
-  quotes: Quote[];
-  mediums: string[];
-  tags: string[];
-  authors: string[];
-  languages: string[];
-  topLevelCategories: TopLevelCategory[];
-  selectedSubcategory: Subcategory;
+  courses: Course[];
+  programs: Program[];
 };
 
-const AppRoutes: React.FC<Props> = ({
-  quotes,
-  mediums,
-  tags,
-  authors,
-  languages,
-  topLevelCategories,
-  selectedSubcategory,
-}) => {
+const AppRoutes: React.FC<Props> = ({ courses, programs }) => {
   return (
     <Routes>
       {/* Reroute to Method1 on index */}
       <Route path="/" element={<Navigate to="/method1" replace={true} />} />
       <Route
         path="/method1"
-        element={
-          <QuotesViewFiltered
-            quotes={quotes}
-            mediums={mediums}
-            tags={tags}
-            authors={authors}
-            languages={languages}
-          />
-        }
+        element={<CoursesViewFiltered courses={courses} programs={programs} />}
       />
-      <Route
+      {/* <Route
         path="/method2"
         element={
           <QuotesViewAccordion
@@ -59,7 +34,7 @@ const AppRoutes: React.FC<Props> = ({
             subcategory={selectedSubcategory}
           />
         }
-      />
+      /> */}
     </Routes>
   );
 };

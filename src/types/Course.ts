@@ -13,6 +13,7 @@ import {
 import { CourseDependent, ProgramDependent } from "./Dependent";
 import { LearningOutcome } from "./LearningOutcome";
 import { Requisites } from "./Requisites";
+import { Credits } from "./Credits";
 
 export type Course = {
   /**
@@ -45,11 +46,7 @@ export type Course = {
    * Email address
    */
   createdBy: string;
-  credits: {
-    creditHours: { min?: number; value: number; operator: string };
-    lectureHours?: { value: number; operator: string };
-    labHours?: { value: number; operator: string };
-  };
+  credits: Credits;
   customFields?: {
     /**
      * courseGroupId = curriculumID + titleCode

@@ -31,7 +31,7 @@ const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
     <AppShell.Header px="sm">
       <Group h="100%" gap="xs" style={{ flex: 1 }}>
         <Button {...getButtonProps(RouteEndpoints.Method1, isMethod1)}>
-          V1
+          All Courses
         </Button>
         <Button {...getButtonProps(RouteEndpoints.Method2, isMethod2)}>
           V2
