@@ -11,6 +11,7 @@ export enum CourseTypicallyOffered {
   FALL_WINTER = "Fall and Winter",
   FALL_WINTER_SPRING = "Fall, Winter, and Spring",
   FALL_WINTER_SUMMER = "Fall, Winter, and Summer",
+  FALL_WINTER_SPRINGSUMMER_SPRING_SUMMER = "Fall; Winter; Spring-Summer; Spring; Summer",
   ALL = "All Semesters/Terms",
   CONTACT_DEPT = "Contact Department",
   WINTER_ODD_SPRING_EVEN = "Winter odd years, Spring even years",
@@ -26,6 +27,15 @@ export enum CourseTypicallyOffered {
   FALL_TERM_2 = "Fall Term 2",
   WINTER_TERM_1 = "Winter Term 1",
   WINTER_TERM_2 = "Winter Term 2",
+  FALL_AND_WINTER_TERM_1 = "Fall Term 1; Winter Term 1",
+  FALL_AND_WINTER_EACH_TERM = "Fall Term 1; Fall Term 2; Winter Term 1; Winter Term 2",
+}
+
+export enum AcademicPeriod {
+  FALL = "Fall",
+  WINTER = "Winter",
+  SPRING = "Spring",
+  SUMMER = "Summer",
 }
 
 export enum Attribute {
