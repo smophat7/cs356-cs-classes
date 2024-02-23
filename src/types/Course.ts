@@ -6,10 +6,10 @@ import {
   Attribute,
   College,
   CourseType,
-  Department,
   GradeMode,
   CourseTypicallyOffered,
 } from "./Enums";
+import { Department } from "./Department";
 import { CourseDependent, ProgramDependent } from "./Dependent";
 import { LearningOutcome } from "./LearningOutcome";
 import { Requisites } from "./Requisites";

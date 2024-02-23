@@ -8,11 +8,18 @@ import {
   Group,
   Title,
   Stack,
+  Container,
+  ComboboxItem,
+  ComboboxData,
 } from "@mantine/core";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import { CreditHours } from "../types/Credits";
-import { Department } from "../types/Enums";
+import {
+  Department,
+  getDepartmentCode,
+  getDepartmentTitle,
+} from "../types/Department";
 import { CourseCardsDisplay } from "../components";
 
 type Props = {
@@ -25,6 +32,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
   const [creditHourFilter, setCreditHourFilter] = useState<string[]>([]);
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
 
+  // Filter courses based on filter selections
   useEffect(() => {
     const newFilteredCourses = courses.filter(
       (course) =>
@@ -74,39 +82,61 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
   };
 
+  const multiSelectData: ComboboxData = Object.values(Department).map(
+    (department) => ({
+      group: getDepartmentTitle(department),
+      items: [
+        {
+          value: department,
+          label: getDepartmentCode(department),
+        } as ComboboxItem,
+      ],
+    })
+  );
+
   return (
     <Flex h="100%" direction={{ base: "column", sm: "row" }} gap={30}>
-      <Stack w={{ base: 250, sm: "33%", md: "25%" }} px={0}>
-        <div>
-          <Title order={3}>Departments</Title>
-          <MultiSelect
-            data={Object.values(Department)}
-            value={departmentsFilter}
-            onChange={(values) => setDepartmentsFilter(values as Department[])}
-            clearable
-            hidePickedOptions
-            searchable
-          />
-        </div>
-        <div>
-          <Title order={3}>Number of Credits</Title>
-          <Chip.Group
-            multiple
-            value={creditHourFilter}
-            onChange={setCreditHourFilter}
-          >
-            <Group>
-              <Chip value="1">1</Chip>
-              <Chip value="2">2</Chip>
-              <Chip value="3">3</Chip>
-              <Chip value="4">4</Chip>
-            </Group>
-          </Chip.Group>
-        </div>
-        <Text>
-          {filteredCourses.length} of {courses.length} courses
-        </Text>
-      </Stack>
+      <Container w={{ base: 250, sm: "33%", md: "25%" }} px={0}>
+        <Stack>
+          <div>
+            <Title order={1}>Courses</Title>
+            <Text size="lg">
+              Explore all the courses that are part of our CS programs
+            </Text>
+            <Text c="dimmed">
+              Showing {filteredCourses.length} of {courses.length} courses
+            </Text>
+          </div>
+          <div>
+            <Title order={4}>Departments</Title>
+            <MultiSelect
+              data={multiSelectData}
+              value={departmentsFilter}
+              onChange={(values) =>
+                setDepartmentsFilter(values as Department[])
+              }
+              clearable
+              hidePickedOptions
+              searchable
+            />
+          </div>
+          <div>
+            <Title order={4}>Credit Hours</Title>
+            <Chip.Group
+              multiple
+              value={creditHourFilter}
+              onChange={setCreditHourFilter}
+            >
+              <Group>
+                <Chip value="1">1</Chip>
+                <Chip value="2">2</Chip>
+                <Chip value="3">3</Chip>
+                <Chip value="4">4</Chip>
+              </Group>
+            </Chip.Group>
+          </div>
+        </Stack>
+      </Container>
       <ScrollArea w={{ base: "100%", sm: "67%", md: "75%" }}>
         <CourseCardsDisplay courses={filteredCourses} />
       </ScrollArea>

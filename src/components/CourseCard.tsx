@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   Divider,
@@ -10,10 +11,8 @@ import {
   Grid,
 } from "@mantine/core";
 import { Course } from "../types/Course";
-import { getCreditHoursText } from "../utils/getCreditHoursText";
 import { AcademicPeriod, CourseTypicallyOffered } from "../types/Enums";
-import React from "react";
-import { convertToAcademicPeriods } from "../utils/convertToAcademicPeriods";
+import { convertToAcademicPeriods, getCreditHoursText } from "../utils";
 
 type Props = {
   course: Course;

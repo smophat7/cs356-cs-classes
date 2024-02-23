@@ -64,25 +64,6 @@ export enum CourseType {
   Z = "Z - Other",
 }
 
-export enum Department {
-  ARTHC = "1246",
-  BIO = "1441",
-  CS = "1323", // CS and CSANM
-  CHEM = "1322",
-  DESAN = "1177",
-  EC_EN = "1130", // Electrical and Computer Engineering
-  ECON = "1384",
-  IS = "1517",
-  LING = "1253",
-  MATH = "1326",
-  MMBIO = "1064",
-  PHSCS = "1328",
-  PWS = "1446",
-  STAT = "1329",
-  TMA = "1182",
-  WRTG = "1238",
-}
-
 export enum Logic {
   AND = "and",
   OR = "or",
