@@ -205,7 +205,7 @@
     "courseDependents": [],
     "courseGroupId": "12064-000",
     "courseNumber": "130",
-    "courseTypicallyOffered": "Fall; Winter.",
+    "courseTypicallyOffered": "Fall and Winter",
     "createdAt": 1652126734390,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -440,7 +440,7 @@
     "courseDependents": [],
     "courseGroupId": "13600-000",
     "courseNumber": "250",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652126734390,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -1832,7 +1832,7 @@
     ],
     "courseGroupId": "14033-000",
     "courseNumber": "180",
-    "courseTypicallyOffered": "Winter.",
+    "courseTypicallyOffered": "Winter",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -2398,7 +2398,7 @@
     "courseDependents": [],
     "courseGroupId": "10178-002",
     "courseNumber": "224",
-    "courseTypicallyOffered": "Fall, Winter, Summer",
+    "courseTypicallyOffered": "Fall, Winter, and Summer",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -2699,7 +2699,7 @@
     ],
     "courseGroupId": "10648-000",
     "courseNumber": "235",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -3080,7 +3080,7 @@
     "courseDependents": [],
     "courseGroupId": "10649-000",
     "courseNumber": "236",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -4422,7 +4422,7 @@
     "courseDependents": [],
     "courseGroupId": "01513-003",
     "courseNumber": "345",
-    "courseTypicallyOffered": "Fall, Winter, Summer",
+    "courseTypicallyOffered": "Fall, Winter, and Summer",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -7749,7 +7749,7 @@
     "courseDependents": [],
     "courseGroupId": "13460-000",
     "courseNumber": "477R",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652126620899,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -10707,7 +10707,7 @@
     "courseDependents": [],
     "courseGroupId": "11930-002",
     "courseNumber": "150",
-    "courseTypicallyOffered": "Fall Term 1; Fall Term 2; Winter Term 1; Winter Term 2.",
+    "courseTypicallyOffered": "Fall Term 1; Fall Term 2; Winter Term 1; Winter Term 2",
     "createdAt": 1652123917722,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -12446,7 +12446,7 @@
     "courseDependents": [],
     "courseGroupId": "13819-000",
     "courseNumber": "101",
-    "courseTypicallyOffered": "Fall Term 1; Winter Term 1.",
+    "courseTypicallyOffered": "Fall Term 1; Winter Term 1",
     "createdAt": 1652123917722,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -12754,7 +12754,7 @@
     "courseDependents": [],
     "courseGroupId": "10179-002",
     "courseNumber": "220",
-    "courseTypicallyOffered": "Fall; Winter; Spring.",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1676293423440,
     "credits": {
       "creditHours": { "min": 3, "value": 3, "operator": "" },
@@ -12924,7 +12924,7 @@
     ],
     "courseGroupId": "srHJV2UeJBpRJrZHrf0y",
     "courseNumber": "224",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1676414654173,
     "createdBy": "hkaelin@byu.edu",
     "credits": {
@@ -13230,7 +13230,7 @@
     "courseDependents": [],
     "courseGroupId": "09761-006",
     "courseNumber": "424",
-    "courseTypicallyOffered": "Winter.",
+    "courseTypicallyOffered": "Winter",
     "createdAt": 1676379740949,
     "credits": {
       "creditHours": { "min": 4, "value": 4, "operator": "" },
@@ -13767,7 +13767,7 @@
     "courseDependents": [],
     "courseGroupId": "01580-001",
     "courseNumber": "388",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652126723293,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -14348,7 +14348,7 @@
     "courseDependents": [],
     "courseGroupId": "03616-004",
     "courseNumber": "113",
-    "courseTypicallyOffered": "Fall; Winter; Spring-Summer; Spring; Summer.",
+    "courseTypicallyOffered": "Fall; Winter; Spring-Summer; Spring; Summer",
     "createdAt": 1652124908538,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -14634,7 +14634,7 @@
     "courseDependents": [],
     "courseGroupId": "03605-008",
     "courseNumber": "290",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652124908538,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -15434,7 +15434,7 @@
     "courseDependents": [],
     "courseGroupId": "08670-000",
     "courseNumber": "522",
-    "courseTypicallyOffered": "Winter.",
+    "courseTypicallyOffered": "Winter",
     "createdAt": 1676898084151,
     "credits": {
       "creditHours": { "min": 3, "value": 3, "operator": "" },
@@ -15914,7 +15914,7 @@
     ],
     "courseGroupId": "09975-002",
     "courseNumber": "240",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1697210860556,
     "credits": {
       "creditHours": { "min": 3, "value": 3, "operator": "" },
@@ -16456,7 +16456,7 @@
     "courseDependents": [],
     "courseGroupId": "04540-015",
     "courseNumber": "121",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652127653439,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -18809,7 +18809,7 @@
     "courseDependents": [],
     "courseGroupId": "05620-005",
     "courseNumber": "201",
-    "courseTypicallyOffered": "Fall, Winter, Spring",
+    "courseTypicallyOffered": "Fall, Winter, and Spring",
     "createdAt": 1652127006227,
     "createdBy": "tim-scraping@example.com",
     "credits": {
@@ -20339,7 +20339,7 @@
     ],
     "courseGroupId": "03140-005",
     "courseNumber": "377",
-    "courseTypicallyOffered": "Winter Term 1.",
+    "courseTypicallyOffered": "Winter Term 1",
     "createdAt": 1652125796093,
     "createdBy": "tim-scraping@example.com",
     "credits": {

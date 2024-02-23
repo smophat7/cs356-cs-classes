@@ -11,6 +11,7 @@ export enum CourseTypicallyOffered {
   FALL_WINTER = "Fall and Winter",
   FALL_WINTER_SPRING = "Fall, Winter, and Spring",
   FALL_WINTER_SUMMER = "Fall, Winter, and Summer",
+  FALL_WINTER_SPRINGSUMMER_SPRING_SUMMER = "Fall; Winter; Spring-Summer; Spring; Summer",
   ALL = "All Semesters/Terms",
   CONTACT_DEPT = "Contact Department",
   WINTER_ODD_SPRING_EVEN = "Winter odd years, Spring even years",
@@ -26,6 +27,15 @@ export enum CourseTypicallyOffered {
   FALL_TERM_2 = "Fall Term 2",
   WINTER_TERM_1 = "Winter Term 1",
   WINTER_TERM_2 = "Winter Term 2",
+  FALL_AND_WINTER_TERM_1 = "Fall Term 1; Winter Term 1",
+  FALL_AND_WINTER_EACH_TERM = "Fall Term 1; Fall Term 2; Winter Term 1; Winter Term 2",
+}
+
+export enum AcademicPeriod {
+  FALL = "Fall",
+  WINTER = "Winter",
+  SPRING = "Spring",
+  SUMMER = "Summer",
 }
 
 export enum Attribute {
@@ -52,25 +62,6 @@ export enum CourseType {
   W = "W - Web Course",
   X = "X - Special Credit Only",
   Z = "Z - Other",
-}
-
-export enum Department {
-  ARTHC = "1246",
-  BIO = "1441",
-  CS = "1323", // CS and CSANM
-  CHEM = "1322",
-  DESAN = "1177",
-  EC_EN = "1130", // Electrical and Computer Engineering
-  ECON = "1384",
-  IS = "1517",
-  LING = "1253",
-  MATH = "1326",
-  MMBIO = "1064",
-  PHSCS = "1328",
-  PWS = "1446",
-  STAT = "1329",
-  TMA = "1182",
-  WRTG = "1238",
 }
 
 export enum Logic {
