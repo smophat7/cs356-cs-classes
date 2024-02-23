@@ -47,7 +47,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
     return (
       <Badge
         radius="xs"
-        variant={options.includes(desiredPeriod) ? "filled" : "default"}
+        variant={options.includes(desiredPeriod) ? "filled" : "light"}
       >
         {label}
       </Badge>
