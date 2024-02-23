@@ -20,7 +20,9 @@ import {
   getDepartmentCode,
   getDepartmentTitle,
 } from "../types/Department";
-import { CourseCardsDisplay } from "../components";
+import { CourseCardsDisplay, Filter } from "../components";
+import { AcademicPeriod } from "../types/Enums";
+import { convertToAcademicPeriods } from "../utils";
 
 type Props = {
   courses: Course[];
@@ -29,8 +31,12 @@ type Props = {
 
 const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
   const [departmentsFilter, setDepartmentsFilter] = useState<Department[]>([]);
-  const [creditHourFilter, setCreditHourFilter] = useState<string[]>([]);
+  const [creditHourFilter, setCreditHourFilter] = useState<number[]>([]);
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
+  const [
+    academicPeriodsWhenOfferedFilter,
+    setAcademicPeriodsWhenOfferedFilter,
+  ] = useState<AcademicPeriod[]>([]);
 
   // Filter courses based on filter selections
   useEffect(() => {
@@ -38,14 +44,21 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
       (course) =>
         (departmentsFilter.length === 0 ||
           isInDepartmentsFilter(course.departments, departmentsFilter)) &&
-        (creditHourFilter === null ||
-          isInCreditHourFilter(
-            course.credits.creditHours,
-            creditHourFilter.map(Number)
+        (creditHourFilter.length === 0 ||
+          isInCreditHourFilter(course.credits.creditHours, creditHourFilter)) &&
+        (academicPeriodsWhenOfferedFilter.length === 0 ||
+          isInAcademicPeriodsFilter(
+            convertToAcademicPeriods(course.courseTypicallyOffered),
+            academicPeriodsWhenOfferedFilter
           ))
     );
     setFilteredCourses(newFilteredCourses);
-  }, [departmentsFilter, creditHourFilter, courses]);
+  }, [
+    departmentsFilter,
+    creditHourFilter,
+    academicPeriodsWhenOfferedFilter,
+    courses,
+  ]);
 
   const isInCreditHourFilter = (
     courseCreditHours: CreditHours,
@@ -82,6 +95,16 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
   };
 
+  const isInAcademicPeriodsFilter = (
+    courseAcademicPeriods: AcademicPeriod[],
+    desiredAcademicPeriods: AcademicPeriod[]
+  ) => {
+    console.log(courseAcademicPeriods, desiredAcademicPeriods);
+    return courseAcademicPeriods.some((academicPeriod) =>
+      desiredAcademicPeriods.includes(academicPeriod)
+    );
+  };
+
   const multiSelectData: ComboboxData = Object.values(Department).map(
     (department) => ({
       group: getDepartmentTitle(department),
@@ -94,10 +117,61 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     })
   );
 
+  const departmentFilterElements = (
+    <Filter title="Departments">
+      <MultiSelect
+        data={multiSelectData}
+        value={departmentsFilter}
+        onChange={(values) => setDepartmentsFilter(values as Department[])}
+        clearable
+        hidePickedOptions
+        searchable
+      />
+    </Filter>
+  );
+
+  const creditHourFilterElements = (
+    <Filter title="Credit Hours">
+      <Chip.Group
+        multiple
+        value={creditHourFilter.map((value) => value.toString())}
+        onChange={(values) =>
+          setCreditHourFilter(values.map(Number) as number[])
+        }
+      >
+        <Group>
+          <Chip value="1">1</Chip>
+          <Chip value="2">2</Chip>
+          <Chip value="3">3</Chip>
+          <Chip value="4">4</Chip>
+        </Group>
+      </Chip.Group>
+    </Filter>
+  );
+
+  const academicPeriodsWhenOfferedFilterElements = (
+    <Filter title="Typically Offered">
+      <Chip.Group
+        multiple
+        value={academicPeriodsWhenOfferedFilter}
+        onChange={(values) =>
+          setAcademicPeriodsWhenOfferedFilter(values as AcademicPeriod[])
+        }
+      >
+        <Group>
+          <Chip value={AcademicPeriod.FALL}>{AcademicPeriod.FALL}</Chip>
+          <Chip value={AcademicPeriod.WINTER}>{AcademicPeriod.WINTER}</Chip>
+          <Chip value={AcademicPeriod.SPRING}>{AcademicPeriod.SPRING}</Chip>
+          <Chip value={AcademicPeriod.SUMMER}>{AcademicPeriod.SUMMER}</Chip>
+        </Group>
+      </Chip.Group>
+    </Filter>
+  );
+
   return (
     <Flex h="100%" direction={{ base: "column", sm: "row" }} gap={30}>
       <Container w={{ base: 250, sm: "33%", md: "25%" }} px={0}>
-        <Stack>
+        <Stack gap={24}>
           <div>
             <Title order={1}>Courses</Title>
             <Text size="lg">
@@ -107,34 +181,9 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
               Showing {filteredCourses.length} of {courses.length} courses
             </Text>
           </div>
-          <div>
-            <Title order={4}>Departments</Title>
-            <MultiSelect
-              data={multiSelectData}
-              value={departmentsFilter}
-              onChange={(values) =>
-                setDepartmentsFilter(values as Department[])
-              }
-              clearable
-              hidePickedOptions
-              searchable
-            />
-          </div>
-          <div>
-            <Title order={4}>Credit Hours</Title>
-            <Chip.Group
-              multiple
-              value={creditHourFilter}
-              onChange={setCreditHourFilter}
-            >
-              <Group>
-                <Chip value="1">1</Chip>
-                <Chip value="2">2</Chip>
-                <Chip value="3">3</Chip>
-                <Chip value="4">4</Chip>
-              </Group>
-            </Chip.Group>
-          </div>
+          {departmentFilterElements}
+          {creditHourFilterElements}
+          {academicPeriodsWhenOfferedFilterElements}
         </Stack>
       </Container>
       <ScrollArea w={{ base: "100%", sm: "67%", md: "75%" }}>
