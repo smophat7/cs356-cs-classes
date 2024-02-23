@@ -37,11 +37,14 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     academicPeriodsWhenOfferedFilter,
     setAcademicPeriodsWhenOfferedFilter,
   ] = useState<AcademicPeriod[]>([]);
+  const [courseLevelFilter, setCourseLevelFilter] = useState<number[]>([]);
 
   // Filter courses based on filter selections
   useEffect(() => {
     const newFilteredCourses = courses.filter(
       (course) =>
+        (courseLevelFilter.length === 0 ||
+          isInCourseLevelFilter(course.courseNumber, courseLevelFilter)) &&
         (departmentsFilter.length === 0 ||
           isInDepartmentsFilter(course.departments, departmentsFilter)) &&
         (creditHourFilter.length === 0 ||
@@ -54,11 +57,22 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
     setFilteredCourses(newFilteredCourses);
   }, [
+    courseLevelFilter,
     departmentsFilter,
     creditHourFilter,
     academicPeriodsWhenOfferedFilter,
     courses,
   ]);
+
+  const isInCourseLevelFilter = (
+    courseNumber: string,
+    desiredLevels: number[]
+  ) => {
+    const levelChar = courseNumber.charAt(0);
+    return desiredLevels
+      .map((level) => level / 100)
+      .includes(Number(levelChar));
+  };
 
   const isInCreditHourFilter = (
     courseCreditHours: CreditHours,
@@ -105,7 +119,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
   };
 
-  const multiSelectData: ComboboxData = Object.values(Department).map(
+  const departmentMultiSelectData: ComboboxData = Object.values(Department).map(
     (department) => ({
       group: getDepartmentTitle(department),
       items: [
@@ -117,10 +131,28 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     })
   );
 
+  const courseLevelFilterElements = (
+    <Filter title="Course Level">
+      <Chip.Group
+        multiple
+        value={courseLevelFilter.map((value) => value.toString())}
+        onChange={(values) => setCourseLevelFilter(values.map(Number))}
+      >
+        <Group>
+          <Chip value="100">100</Chip>
+          <Chip value="200">200</Chip>
+          <Chip value="300">300</Chip>
+          <Chip value="400">400</Chip>
+          <Chip value="500">500</Chip>
+        </Group>
+      </Chip.Group>
+    </Filter>
+  );
+
   const departmentFilterElements = (
     <Filter title="Departments">
       <MultiSelect
-        data={multiSelectData}
+        data={departmentMultiSelectData}
         value={departmentsFilter}
         onChange={(values) => setDepartmentsFilter(values as Department[])}
         clearable
@@ -181,6 +213,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
               Showing {filteredCourses.length} of {courses.length} courses
             </Text>
           </div>
+          {courseLevelFilterElements}
           {departmentFilterElements}
           {creditHourFilterElements}
           {academicPeriodsWhenOfferedFilterElements}
