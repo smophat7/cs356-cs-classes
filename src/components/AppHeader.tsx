@@ -34,7 +34,7 @@ const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
           All Courses
         </Button>
         <Button {...getButtonProps(RouteEndpoints.Method2, isMethod2)}>
-          V2
+          Requirements
         </Button>
         <Button {...getButtonProps(RouteEndpoints.Method3, isMethod3, true)}>
           V3
