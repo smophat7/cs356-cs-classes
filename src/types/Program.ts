@@ -1,7 +1,7 @@
 export type Program = {
   programTitle: string;
   programGroupId: string;
-  degreeLevel: string;
+  degreeLevel: "BS" | "MIN";
   variableCreditHourMin: string;
   variableCreditHourMax: string;
   learningOutcomes: ProgramLearningOutcomes;

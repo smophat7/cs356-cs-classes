@@ -11,6 +11,7 @@ import {
   Container,
   ComboboxItem,
   ComboboxData,
+  Select,
 } from "@mantine/core";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
@@ -22,31 +23,37 @@ import {
 } from "../types/Department";
 import { CourseCardsDisplay, Filter } from "../components";
 import { AcademicPeriod } from "../types/Enums";
-import { convertToAcademicPeriods } from "../utils";
+import {
+  convertToAcademicPeriods,
+  getCourseGroupIdsFromProgram,
+} from "../utils";
 
 type Props = {
   courses: Course[];
   programs: Program[];
 };
 
-const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
-  const [departmentsFilter, setDepartmentsFilter] = useState<Department[]>([]);
-  const [creditHourFilter, setCreditHourFilter] = useState<number[]>([]);
+const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
+  const [programFilter, setProgramFilter] = useState<Program | null>(null);
+  const [courseLevelFilter, setCourseLevelFilter] = useState<number[]>([]);
+  const [departmentFilter, setDepartmentFilter] = useState<Department[]>([]);
+  const [creditHourFilter, setCreditHourFilter] = useState<number[]>([]);
   const [
     academicPeriodsWhenOfferedFilter,
     setAcademicPeriodsWhenOfferedFilter,
   ] = useState<AcademicPeriod[]>([]);
-  const [courseLevelFilter, setCourseLevelFilter] = useState<number[]>([]);
 
   // Filter courses based on filter selections
   useEffect(() => {
     const newFilteredCourses = courses.filter(
       (course) =>
+        (programFilter === null ||
+          isInProgramFilter(course.courseGroupId, programFilter)) &&
         (courseLevelFilter.length === 0 ||
           isInCourseLevelFilter(course.courseNumber, courseLevelFilter)) &&
-        (departmentsFilter.length === 0 ||
-          isInDepartmentsFilter(course.departments, departmentsFilter)) &&
+        (departmentFilter.length === 0 ||
+          isInDepartmentsFilter(course.departments, departmentFilter)) &&
         (creditHourFilter.length === 0 ||
           isInCreditHourFilter(course.credits.creditHours, creditHourFilter)) &&
         (academicPeriodsWhenOfferedFilter.length === 0 ||
@@ -57,12 +64,18 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
     setFilteredCourses(newFilteredCourses);
   }, [
+    programFilter,
     courseLevelFilter,
-    departmentsFilter,
+    departmentFilter,
     creditHourFilter,
     academicPeriodsWhenOfferedFilter,
     courses,
   ]);
+
+  const isInProgramFilter = (courseGroupId: string, program: Program) => {
+    console.log(getCourseGroupIdsFromProgram(program), courseGroupId);
+    return getCourseGroupIdsFromProgram(program).includes(courseGroupId);
+  };
 
   const isInCourseLevelFilter = (
     courseNumber: string,
@@ -74,6 +87,11 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
       .includes(Number(levelChar));
   };
 
+  /**
+   * Check if a course's credit hours are one of the indicated desired credit hours.
+   * A x.5 credit hour course is considered to be in the range of the whole number credit hours.
+   * For example, a 1.5 credit hour course is part of both the 1 and 2 credit hour levels.
+   */
   const isInCreditHourFilter = (
     courseCreditHours: CreditHours,
     desiredCredits: number[]
@@ -119,6 +137,27 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
     );
   };
 
+  const programSelectData: ComboboxData = [
+    {
+      group: "Majors",
+      items: programs
+        .filter((program) => program.degreeLevel === "BS")
+        .map((program) => ({
+          value: program.programGroupId,
+          label: program.programTitle,
+        })),
+    },
+    {
+      group: "Minors",
+      items: programs
+        .filter((program) => program.degreeLevel === "MIN")
+        .map((program) => ({
+          value: program.programGroupId,
+          label: program.programTitle,
+        })),
+    },
+  ];
+
   const departmentMultiSelectData: ComboboxData = Object.values(Department).map(
     (department) => ({
       group: getDepartmentTitle(department),
@@ -129,6 +168,25 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
         } as ComboboxItem,
       ],
     })
+  );
+
+  const programFilterElements = (
+    <Filter
+      title="Program"
+      subtitle="View courses that count towards program requirements"
+    >
+      <Select
+        data={programSelectData}
+        placeholder="All Programs"
+        value={programFilter?.programGroupId}
+        onChange={(value) =>
+          setProgramFilter(
+            programs.find((x) => x.programGroupId === value) || null
+          )
+        }
+        clearable
+      />
+    </Filter>
   );
 
   const courseLevelFilterElements = (
@@ -150,11 +208,11 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
   );
 
   const departmentFilterElements = (
-    <Filter title="Departments">
+    <Filter title="Department">
       <MultiSelect
         data={departmentMultiSelectData}
-        value={departmentsFilter}
-        onChange={(values) => setDepartmentsFilter(values as Department[])}
+        value={departmentFilter}
+        onChange={(values) => setDepartmentFilter(values as Department[])}
         clearable
         hidePickedOptions
         searchable
@@ -182,7 +240,10 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
   );
 
   const academicPeriodsWhenOfferedFilterElements = (
-    <Filter title="Typically Offered">
+    <Filter
+      title="Typically Offered"
+      subtitle="Check MyMap for semester-specific course offerings"
+    >
       <Chip.Group
         multiple
         value={academicPeriodsWhenOfferedFilter}
@@ -207,12 +268,13 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses }) => {
           <div>
             <Title order={1}>Courses</Title>
             <Text size="lg">
-              Explore all the courses that are part of our CS programs
+              Explore all courses that are part of our undergraduate CS programs
             </Text>
             <Text c="dimmed">
               Showing {filteredCourses.length} of {courses.length} courses
             </Text>
           </div>
+          {programFilterElements}
           {courseLevelFilterElements}
           {departmentFilterElements}
           {creditHourFilterElements}
