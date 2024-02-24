@@ -298,7 +298,7 @@
     ],
     "requirements": [
       {
-        "title": "Requirement 1 -Complete 8 Courses",
+        "title": "Requirement 1 - Complete 8 Courses",
         "description": "Computer Science core:",
         "note": null,
         "courses": [
@@ -314,7 +314,7 @@
         "options": []
       },
       {
-        "title": "Requirement 2 -Complete 7 Courses",
+        "title": "Requirement 2 - Complete 7 Courses",
         "description": "Biology core:",
         "note": null,
         "courses": [
@@ -329,7 +329,7 @@
         "options": []
       },
       {
-        "title": "Requirement 3 -Complete 5 Courses",
+        "title": "Requirement 3 - Complete 5 Courses",
         "description": "Supporting courses:",
         "note": null,
         "courses": [
@@ -342,7 +342,7 @@
         "options": []
       },
       {
-        "title": "Requirement 4 -Complete 1 of 2 Courses",
+        "title": "Requirement 4 - Complete 1 of 2 Courses",
         "description": null,
         "note": null,
         "courses": [
@@ -352,7 +352,7 @@
         "options": []
       },
       {
-        "title": "Requirement 5 -Complete 1 of 2 Courses",
+        "title": "Requirement 5 - Complete 1 of 2 Courses",
         "description": null,
         "note": null,
         "courses": [
@@ -362,13 +362,13 @@
         "options": []
       },
       {
-        "title": "Requirement 6 -Complete 12 hours",
+        "title": "Requirement 6 - Complete 12 hours",
         "description": "Courses will not double count between Requirement 5 and Requirement 6.",
         "note": null,
         "courses": [],
         "options": [
           {
-            "title": "Option 6.1 -Complete at least 6 hours up to 12 hours",
+            "title": "Option 6.1 - Complete at least 6 hours up to 12 hours",
             "description": "Complete up to 12 hours from the following courses",
             "note": null,
             "courses": [
@@ -412,7 +412,7 @@
             ]
           },
           {
-            "title": "Option 6.2 -Complete up to 6 hours",
+            "title": "Option 6.2 - Complete up to 6 hours",
             "description": null,
             "note": null,
             "courses": [
