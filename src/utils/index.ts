@@ -5,3 +5,4 @@ export { convertToAcademicPeriods } from "./convertToAcademicPeriods";
 export { getCreditHoursText } from "./getCreditHoursText";
 export { getCourseGroupIdsFromProgram } from "./getCourseGroupIdsFromProgram";
 export { getProgramSelectData } from "./getProgramSelectData";
+export { filterHelpers } from "./filterHelpers";
