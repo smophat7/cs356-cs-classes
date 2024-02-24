@@ -6,5 +6,6 @@ export { default as MediumIcon } from "./MediumIcon";
 export { default as AppHeader } from "./AppHeader";
 export { default as AppRoutes } from "./AppRoutes";
 export { default as CourseCardsDisplay } from "./CourseCardsDisplay";
+export { default as CourseGroupedCardsDisplay} from "./CourseGroupedCardsDisplay";
 export { default as QuoteCardsDisplay } from "./QuoteCardsDisplay";
 export { default as Filter } from "./Filter";
