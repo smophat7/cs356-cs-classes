@@ -4,6 +4,7 @@ import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import MyMAPOrganizedAccordion from "../views/MyMapOrganizedAccordion";
 import { RouteEndpoints } from "../types/RouteEndpoints";
+import { Center, Loader } from "@mantine/core";
 
 type Props = {
   courses: Course[];
@@ -11,6 +12,14 @@ type Props = {
 };
 
 const AppRoutes: React.FC<Props> = ({ courses, programs }) => {
+  // If courses or programs are not yet loaded, do not render the routes
+  if (courses.length === 0 || programs.length === 0) {
+    return (
+      <Center h="100%">
+        <Loader />
+      </Center>
+    );
+  }
   return (
     <Routes>
       {/* Reroute to a page on index */}

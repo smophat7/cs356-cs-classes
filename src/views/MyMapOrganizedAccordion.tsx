@@ -3,9 +3,11 @@ import { CourseGroupedCardsDisplay, Filter } from "../components";
 import { Course } from "../types/Course";
 import { Program, ProgramRequirement } from "../types/Program";
 import {
+  Center,
   ComboboxData,
   Container,
   Flex,
+  Loader,
   ScrollArea,
   Select,
 } from "@mantine/core";
@@ -18,11 +20,11 @@ type Props = {
 
 const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
   const [programFilter, setProgramFilter] = useState<Program | null>(
-    programs[0]
+    programs[0] || null
   );
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
   const [selectedProgramRequirements, setSelectedProgramRequirements] =
-    useState<ProgramRequirement[]>([]);
+    useState<ProgramRequirement[] | null>(null);
 
   useEffect(() => {
     const newFilteredCourses = courses.filter(
@@ -85,11 +87,15 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
     <Flex h="100%" direction={{ base: "column" }} gap={24}>
       <Container>{programFilterElements}</Container>
       <ScrollArea>
-        {programFilter && (
+        {programFilter && selectedProgramRequirements ? (
           <CourseGroupedCardsDisplay
             courses={filteredCourses}
             requirements={selectedProgramRequirements}
           />
+        ) : (
+          <Center>
+            <Loader h="100%" />
+          </Center>
         )}
       </ScrollArea>
     </Flex>

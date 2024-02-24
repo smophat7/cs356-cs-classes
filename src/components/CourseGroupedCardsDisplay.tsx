@@ -37,15 +37,23 @@ const CourseGroupedCardsDisplay: React.FC<Props> = ({
             <Text size="lg">{requirement.title}</Text>
           </Accordion.Control>
           <Accordion.Panel>
-            <Stack gap={5}>
+            <Stack gap={10}>
               {requirement.description && (
                 <Text>{requirement.description}</Text>
               )}
-              <CourseCardsDisplay
-                courses={coursesInRequirement(requirement)}
-                justify="flex-start"
-              />
+              {requirement.courses.length > 0 && (
+                <CourseCardsDisplay
+                  courses={coursesInRequirement(requirement)}
+                  justify="flex-start"
+                />
+              )}
               {requirement.note && <Text>{requirement.note}</Text>}
+              {requirement.options && requirement.options.length > 0 && (
+                <CourseGroupedCardsDisplay
+                  courses={courses}
+                  requirements={requirement.options}
+                />
+              )}
             </Stack>
           </Accordion.Panel>
         </Accordion.Item>

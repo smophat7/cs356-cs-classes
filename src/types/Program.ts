@@ -28,17 +28,10 @@ export type RequiredCourse = {
   comment: string | null;
 };
 
-export type RequirementOption = {
-  title: string;
-  description: string | null;
-  note: string | null;
-  courses: RequiredCourse[];
-};
-
 export type ProgramRequirement = {
   title: string;
   description: string | null;
   note: string | null;
   courses: RequiredCourse[];
-  options: RequirementOption[];
+  options?: ProgramRequirement[];
 };
