@@ -12,6 +12,7 @@ import {
   ComboboxItem,
   ComboboxData,
   Select,
+  Center,
 } from "@mantine/core";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
@@ -282,7 +283,13 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
         </Stack>
       </Container>
       <ScrollArea w={{ base: "100%", sm: "67%", md: "75%" }}>
-        <CourseCardsDisplay courses={filteredCourses} />
+        {filteredCourses.length === 0 ? (
+          <Center>
+            <Title order={2}>No courses found...</Title>
+          </Center>
+        ) : (
+          <CourseCardsDisplay courses={filteredCourses} />
+        )}
       </ScrollArea>
     </Flex>
   );

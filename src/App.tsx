@@ -15,6 +15,7 @@ export default function App() {
 
   const location = useLocation();
   const isCoursesView = location.pathname === RouteEndpoints.Courses;
+  const isRequirementsView = location.pathname === RouteEndpoints.Requirements;
   // const [topLevelCategories, setTopLevelCategories] = useState<
   //   TopLevelCategory[]
   // >([]);
@@ -67,7 +68,9 @@ export default function App() {
         )} */}
       <AppShell header={{ height: 60 }} padding="md">
         <AppHeader isNavbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        <AppShell.Main h={isCoursesView ? "100dvh" : "inherit"}>
+        <AppShell.Main
+          h={isCoursesView || isRequirementsView ? "100dvh" : "inherit"}
+        >
           <AppRoutes courses={courses} programs={programs} />
         </AppShell.Main>
       </AppShell>

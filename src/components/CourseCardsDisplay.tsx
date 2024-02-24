@@ -1,18 +1,18 @@
-import { Center, Flex, Title } from "@mantine/core";
+import { Flex, StyleProp } from "@mantine/core";
 import { Course } from "../types/Course";
 import { CourseCard } from ".";
 
 type Props = {
   courses: Course[];
+  justify?: StyleProp<React.CSSProperties["justifyContent"]>;
 };
 
-const CourseCardsDisplay: React.FC<Props> = ({ courses }) => {
-  return courses.length === 0 ? (
-    <Center>
-      <Title order={2}>No courses found...</Title>
-    </Center>
-  ) : (
-    <Flex gap="md" justify="center" direction="row" wrap="wrap">
+const CourseCardsDisplay: React.FC<Props> = ({
+  courses,
+  justify = "center",
+}) => {
+  return (
+    <Flex gap="md" justify={justify} direction="row" wrap="wrap">
       {courses.map((course, i) => {
         return <CourseCard key={i} course={course} />;
       })}
