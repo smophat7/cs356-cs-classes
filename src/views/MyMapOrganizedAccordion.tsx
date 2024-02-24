@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { CourseGroupedCardsDisplay, Filter } from "../components";
 import { Course } from "../types/Course";
-import { Program, ProgramRequirement } from "../types/Program";
+import { Program } from "../types/Program";
 import { ComboboxData, Container, Flex, ScrollArea, Select } from "@mantine/core";
 import { getCourseGroupIdsFromProgram } from "../utils";
+
+type Requirement = {
+    title: string;
+    description: string | null;
+    note: string | null;
+    courses: Course[];
+    options: any[]; // You might want to define a type for options as well
+  };
 
 type Props = {
     courses: Course[];
@@ -16,7 +24,7 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({
 }) => {        
     const [programFilter, setProgramFilter] = useState<Program | null>(null);
     const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
-    const [selectedProgramRequirements, setSelectedProgramRequirements] = useState<Object[]>([]);
+    const [selectedProgramRequirements, setSelectedProgramRequirements] = useState<Requirement[]>([]);
     
     useEffect(() => {
         const newFilteredCourses = courses.filter(
@@ -27,7 +35,7 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({
         setFilteredCourses(newFilteredCourses);        
         // Set the selected program's requirements array
         if (programFilter) {
-          setSelectedProgramRequirements(programFilter.requirements || []);          
+            setSelectedProgramRequirements((programFilter.requirements as unknown as Requirement[]) || []);          
         } else {
           setSelectedProgramRequirements([]);
         }
