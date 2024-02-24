@@ -27,6 +27,7 @@ import { AcademicPeriod } from "../types/Enums";
 import {
   convertToAcademicPeriods,
   getCourseGroupIdsFromProgram,
+  getProgramSelectData,
 } from "../utils";
 
 type Props = {
@@ -138,27 +139,6 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     );
   };
 
-  const programSelectData: ComboboxData = [
-    {
-      group: "Majors",
-      items: programs
-        .filter((program) => program.degreeLevel === "BS")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-    {
-      group: "Minors",
-      items: programs
-        .filter((program) => program.degreeLevel === "MIN")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-  ];
-
   const departmentMultiSelectData: ComboboxData = Object.values(Department).map(
     (department) => ({
       group: getDepartmentTitle(department),
@@ -177,7 +157,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
       subtitle="View courses that count towards program requirements"
     >
       <Select
-        data={programSelectData}
+        data={getProgramSelectData(programs)}
         placeholder="All Programs"
         value={programFilter?.programGroupId}
         onChange={(value) =>
@@ -211,6 +191,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
   const departmentFilterElements = (
     <Filter title="Department">
       <MultiSelect
+        placeholder="Add Departments"
         data={departmentMultiSelectData}
         value={departmentFilter}
         onChange={(values) => setDepartmentFilter(values as Department[])}

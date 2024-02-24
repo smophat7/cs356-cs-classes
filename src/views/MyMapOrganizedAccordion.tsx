@@ -11,7 +11,7 @@ import {
   ScrollArea,
   Select,
 } from "@mantine/core";
-import { getCourseGroupIdsFromProgram } from "../utils";
+import { getCourseGroupIdsFromProgram, getProgramSelectData } from "../utils";
 
 type Props = {
   courses: Course[];
@@ -45,34 +45,13 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
     return getCourseGroupIdsFromProgram(program).includes(courseGroupId);
   };
 
-  const programSelectData: ComboboxData = [
-    {
-      group: "Majors",
-      items: programs
-        .filter((program) => program.degreeLevel === "BS")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-    {
-      group: "Minors",
-      items: programs
-        .filter((program) => program.degreeLevel === "MIN")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-  ];
-
   const programFilterElements = (
     <Filter
       title="Program"
       subtitle="View courses that count towards program requirements"
     >
       <Select
-        data={programSelectData}
+        data={getProgramSelectData(programs)}
         value={programFilter?.programGroupId}
         onChange={(value) =>
           setProgramFilter(
