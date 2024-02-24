@@ -1,4 +1,4 @@
-import { Accordion, Center, Text, Title } from "@mantine/core";
+import { Accordion, Center, Stack, Text, Title } from "@mantine/core";
 import { Course } from "../types/Course";
 import { CourseCardsDisplay } from ".";
 import { ProgramRequirement } from "../types/Program";
@@ -37,10 +37,16 @@ const CourseGroupedCardsDisplay: React.FC<Props> = ({
             <Text size="lg">{requirement.title}</Text>
           </Accordion.Control>
           <Accordion.Panel>
-            <CourseCardsDisplay
-              courses={coursesInRequirement(requirement)}
-              justify="flex-start"
-            />
+            <Stack gap={5}>
+              {requirement.description && (
+                <Text>{requirement.description}</Text>
+              )}
+              <CourseCardsDisplay
+                courses={coursesInRequirement(requirement)}
+                justify="flex-start"
+              />
+              {requirement.note && <Text>{requirement.note}</Text>}
+            </Stack>
           </Accordion.Panel>
         </Accordion.Item>
       ))}
