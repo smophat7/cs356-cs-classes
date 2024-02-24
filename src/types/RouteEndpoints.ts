@@ -1,5 +1,5 @@
 export enum RouteEndpoints {
-  Method1 = "/method1",
-  Method2 = "/method2",
+  Courses = "/courses",
+  Requirements = "/requirements",
   Method3 = "/method3",
 }

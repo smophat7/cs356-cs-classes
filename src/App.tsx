@@ -14,7 +14,7 @@ export default function App() {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
 
   const location = useLocation();
-  const isMethod1 = location.pathname === RouteEndpoints.Method1;
+  const isCoursesView = location.pathname === RouteEndpoints.Courses;
   // const [topLevelCategories, setTopLevelCategories] = useState<
   //   TopLevelCategory[]
   // >([]);
@@ -67,7 +67,7 @@ export default function App() {
         )} */}
       <AppShell header={{ height: 60 }} padding="md">
         <AppHeader isNavbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        <AppShell.Main h={isMethod1 ? "100dvh" : "inherit"}>
+        <AppShell.Main h={isCoursesView ? "100dvh" : "inherit"}>
           <AppRoutes courses={courses} programs={programs} />
         </AppShell.Main>
       </AppShell>
