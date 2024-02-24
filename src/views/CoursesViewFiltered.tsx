@@ -14,6 +14,7 @@ import {
   Select,
   Center,
   TextInput,
+  CloseButton,
 } from "@mantine/core";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
@@ -130,7 +131,15 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
       <TextInput
         leftSectionPointerEvents="none"
         leftSection={<IconSearch />}
+        rightSection={
+          <CloseButton
+            onClick={() => {
+              setSearchTextFilter("");
+            }}
+          />
+        }
         placeholder="Search anything"
+        value={searchTextFilter}
         onChange={(event) => setSearchTextFilter(event.currentTarget.value)}
       />
     </Filter>
