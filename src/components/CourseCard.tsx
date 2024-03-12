@@ -55,7 +55,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
   };
 
   return (
-    <Card withBorder radius="md" p="md" w={{ base: 250 }} mih={250}>
+    <Card withBorder radius="md" p="md" w={250} mih={250}>
       <Flex direction="column" h="100%">
         <Title order={4}>{course.code}</Title>
         <Title order={6}>{course.name}</Title>

@@ -3,6 +3,8 @@ import { CoursesViewFiltered } from "../views";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import MyMAPOrganizedAccordion from "../views/MyMapOrganizedAccordion";
+import { RouteEndpoints } from "../types/RouteEndpoints";
+import { Center, Loader } from "@mantine/core";
 
 type Props = {
   courses: Course[];
@@ -10,36 +12,31 @@ type Props = {
 };
 
 const AppRoutes: React.FC<Props> = ({ courses, programs }) => {
+  // If courses or programs are not yet loaded, do not render the routes
+  if (courses.length === 0 || programs.length === 0) {
+    return (
+      <Center h="100%">
+        <Loader />
+      </Center>
+    );
+  }
   return (
     <Routes>
-      {/* Reroute to Method1 on index */}
-      <Route path="/" element={<Navigate to="/method1" replace={true} />} />
+      {/* Reroute to a page on index */}
       <Route
-        path="/method1"
+        path="/"
+        element={<Navigate to={RouteEndpoints.Courses} replace={true} />}
+      />
+      <Route
+        path={RouteEndpoints.Courses}
         element={<CoursesViewFiltered courses={courses} programs={programs} />}
       />
       <Route
-        path="/method2"
-        element={<MyMAPOrganizedAccordion courses={courses} programs={programs}/>}
-      />
-      {/* <Route
-        path="/method2"
+        path={RouteEndpoints.Requirements}
         element={
-          <QuotesViewAccordion
-            quotes={quotes}
-            topLevelCategories={topLevelCategories}
-          />
+          <MyMAPOrganizedAccordion courses={courses} programs={programs} />
         }
       />
-      <Route
-        path="/method3"
-        element={
-          <QuotesViewSubcategory
-            quotes={quotes}
-            subcategory={selectedSubcategory}
-          />
-        }
-      /> */}
     </Routes>
   );
 };

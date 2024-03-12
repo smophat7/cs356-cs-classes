@@ -11,8 +11,8 @@ type Props = {
 const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const isMethod1 = location.pathname === RouteEndpoints.Method1;
-  const isMethod2 = location.pathname === RouteEndpoints.Method2;
+  const isCoursesView = location.pathname === RouteEndpoints.Courses;
+  const isRequirementsView = location.pathname === RouteEndpoints.Requirements;
   const isMethod3 = location.pathname === RouteEndpoints.Method3;
 
   const getButtonProps = (
@@ -30,14 +30,13 @@ const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
   return (
     <AppShell.Header px="sm">
       <Group h="100%" gap="xs" style={{ flex: 1 }}>
-        <Button {...getButtonProps(RouteEndpoints.Method1, isMethod1)}>
+        <Button {...getButtonProps(RouteEndpoints.Courses, isCoursesView)}>
           All Courses
         </Button>
-        <Button {...getButtonProps(RouteEndpoints.Method2, isMethod2)}>
+        <Button
+          {...getButtonProps(RouteEndpoints.Requirements, isRequirementsView)}
+        >
           Requirements
-        </Button>
-        <Button {...getButtonProps(RouteEndpoints.Method3, isMethod3, true)}>
-          V3
         </Button>
         {isMethod3 && (
           <Burger

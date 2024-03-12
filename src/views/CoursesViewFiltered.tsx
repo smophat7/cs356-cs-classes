@@ -8,14 +8,15 @@ import {
   Group,
   Title,
   Stack,
-  Container,
   ComboboxItem,
   ComboboxData,
   Select,
+  Center,
+  TextInput,
+  CloseButton,
 } from "@mantine/core";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
-import { CreditHours } from "../types/Credits";
 import {
   Department,
   getDepartmentCode,
@@ -25,8 +26,10 @@ import { CourseCardsDisplay, Filter } from "../components";
 import { AcademicPeriod } from "../types/Enums";
 import {
   convertToAcademicPeriods,
-  getCourseGroupIdsFromProgram,
+  getProgramSelectData,
+  filterHelpers,
 } from "../utils";
+import { IconSearch } from "@tabler/icons-react";
 
 type Props = {
   courses: Course[];
@@ -35,6 +38,10 @@ type Props = {
 
 const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
+  const [searchTextFilteredCourses, setSearchTextFilteredCourses] = useState<
+    Course[] | null
+  >(null);
+  const [searchTextFilter, setSearchTextFilter] = useState<string>("");
   const [programFilter, setProgramFilter] = useState<Program | null>(null);
   const [courseLevelFilter, setCourseLevelFilter] = useState<number[]>([]);
   const [departmentFilter, setDepartmentFilter] = useState<Department[]>([]);
@@ -46,24 +53,40 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
 
   // Filter courses based on filter selections
   useEffect(() => {
-    const newFilteredCourses = courses.filter(
+    const coursesToFilterFrom = searchTextFilteredCourses
+      ? searchTextFilteredCourses
+      : courses;
+    const newFilteredCourses = coursesToFilterFrom.filter(
       (course) =>
         (programFilter === null ||
-          isInProgramFilter(course.courseGroupId, programFilter)) &&
+          filterHelpers.isInProgramFilter(
+            course.courseGroupId,
+            programFilter
+          )) &&
         (courseLevelFilter.length === 0 ||
-          isInCourseLevelFilter(course.courseNumber, courseLevelFilter)) &&
+          filterHelpers.isInCourseLevelFilter(
+            course.courseNumber,
+            courseLevelFilter
+          )) &&
         (departmentFilter.length === 0 ||
-          isInDepartmentsFilter(course.departments, departmentFilter)) &&
+          filterHelpers.isInDepartmentsFilter(
+            course.departments,
+            departmentFilter
+          )) &&
         (creditHourFilter.length === 0 ||
-          isInCreditHourFilter(course.credits.creditHours, creditHourFilter)) &&
+          filterHelpers.isInCreditHourFilter(
+            course.credits.creditHours,
+            creditHourFilter
+          )) &&
         (academicPeriodsWhenOfferedFilter.length === 0 ||
-          isInAcademicPeriodsFilter(
+          filterHelpers.isInAcademicPeriodsFilter(
             convertToAcademicPeriods(course.courseTypicallyOffered),
             academicPeriodsWhenOfferedFilter
           ))
     );
     setFilteredCourses(newFilteredCourses);
   }, [
+    searchTextFilteredCourses,
     programFilter,
     courseLevelFilter,
     departmentFilter,
@@ -72,91 +95,23 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     courses,
   ]);
 
-  const isInProgramFilter = (courseGroupId: string, program: Program) => {
-    console.log(getCourseGroupIdsFromProgram(program), courseGroupId);
-    return getCourseGroupIdsFromProgram(program).includes(courseGroupId);
-  };
-
-  const isInCourseLevelFilter = (
-    courseNumber: string,
-    desiredLevels: number[]
-  ) => {
-    const levelChar = courseNumber.charAt(0);
-    return desiredLevels
-      .map((level) => level / 100)
-      .includes(Number(levelChar));
-  };
-
   /**
-   * Check if a course's credit hours are one of the indicated desired credit hours.
-   * A x.5 credit hour course is considered to be in the range of the whole number credit hours.
-   * For example, a 1.5 credit hour course is part of both the 1 and 2 credit hour levels.
+   * Update subset of filtered coureses only on searchTextFilter change.
+   * Improves performance by not re-filtering everything based on search text
+   * when only other filters have changed.
    */
-  const isInCreditHourFilter = (
-    courseCreditHours: CreditHours,
-    desiredCredits: number[]
-  ) => {
-    if (desiredCredits.length === 0) return true;
-    if (courseCreditHours.min) {
-      for (
-        let i = courseCreditHours.min;
-        i <= courseCreditHours.value;
-        i += 0.5
-      ) {
-        if (
-          desiredCredits.includes(Math.floor(i)) ||
-          desiredCredits.includes(Math.ceil(i))
-        )
-          return true;
-      }
-      return false;
-    } else {
-      return (
-        desiredCredits.includes(Math.floor(courseCreditHours.value)) ||
-        desiredCredits.includes(Math.ceil(courseCreditHours.value))
-      );
+  useEffect(() => {
+    if (searchTextFilter === "") {
+      setSearchTextFilteredCourses(null);
+      return;
     }
-  };
-
-  const isInDepartmentsFilter = (
-    courseDepartments: Department[],
-    desiredDepartments: Department[]
-  ) => {
-    return courseDepartments.some((department) =>
-      desiredDepartments.includes(department)
+    const newSearchTextFilteredCourses = courses.filter(
+      (course) =>
+        searchTextFilter === "" ||
+        filterHelpers.isInSearchTextFilter(course, searchTextFilter)
     );
-  };
-
-  const isInAcademicPeriodsFilter = (
-    courseAcademicPeriods: AcademicPeriod[],
-    desiredAcademicPeriods: AcademicPeriod[]
-  ) => {
-    console.log(courseAcademicPeriods, desiredAcademicPeriods);
-    return courseAcademicPeriods.some((academicPeriod) =>
-      desiredAcademicPeriods.includes(academicPeriod)
-    );
-  };
-
-  const programSelectData: ComboboxData = [
-    {
-      group: "Majors",
-      items: programs
-        .filter((program) => program.degreeLevel === "BS")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-    {
-      group: "Minors",
-      items: programs
-        .filter((program) => program.degreeLevel === "MIN")
-        .map((program) => ({
-          value: program.programGroupId,
-          label: program.programTitle,
-        })),
-    },
-  ];
+    setSearchTextFilteredCourses(newSearchTextFilteredCourses);
+  }, [searchTextFilter, courses]);
 
   const departmentMultiSelectData: ComboboxData = Object.values(Department).map(
     (department) => ({
@@ -170,13 +125,32 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     })
   );
 
+  const searchElements = (
+    <Filter title="Search">
+      <TextInput
+        leftSectionPointerEvents="none"
+        leftSection={<IconSearch />}
+        rightSection={
+          <CloseButton
+            onClick={() => {
+              setSearchTextFilter("");
+            }}
+          />
+        }
+        placeholder="Search anything"
+        value={searchTextFilter}
+        onChange={(event) => setSearchTextFilter(event.currentTarget.value)}
+      />
+    </Filter>
+  );
+
   const programFilterElements = (
     <Filter
       title="Program"
       subtitle="View courses that count towards program requirements"
     >
       <Select
-        data={programSelectData}
+        data={getProgramSelectData(programs)}
         placeholder="All Programs"
         value={programFilter?.programGroupId}
         onChange={(value) =>
@@ -210,6 +184,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
   const departmentFilterElements = (
     <Filter title="Department">
       <MultiSelect
+        placeholder="Add Departments"
         data={departmentMultiSelectData}
         value={departmentFilter}
         onChange={(values) => setDepartmentFilter(values as Department[])}
@@ -263,7 +238,11 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
 
   return (
     <Flex h="100%" direction={{ base: "column", sm: "row" }} gap={30}>
-      <Container w={{ base: 250, sm: "33%", md: "25%" }} px={0}>
+      <ScrollArea
+        h={{ base: "50%", sm: "100%" }}
+        w={{ base: "100%", sm: "33%", md: "25%" }}
+        px={0}
+      >
         <Stack gap={24}>
           <div>
             <Title order={1}>Courses</Title>
@@ -274,15 +253,25 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
               Showing {filteredCourses.length} of {courses.length} courses
             </Text>
           </div>
+          {searchElements}
           {programFilterElements}
           {courseLevelFilterElements}
           {departmentFilterElements}
           {creditHourFilterElements}
           {academicPeriodsWhenOfferedFilterElements}
         </Stack>
-      </Container>
-      <ScrollArea w={{ base: "100%", sm: "67%", md: "75%" }}>
-        <CourseCardsDisplay courses={filteredCourses} />
+      </ScrollArea>
+      <ScrollArea
+        h={{ base: "50%", sm: "100%" }}
+        w={{ base: "100%", sm: "67%", md: "75%" }}
+      >
+        {filteredCourses.length === 0 ? (
+          <Center>
+            <Title order={2}>No courses found...</Title>
+          </Center>
+        ) : (
+          <CourseCardsDisplay courses={filteredCourses} />
+        )}
       </ScrollArea>
     </Flex>
   );
