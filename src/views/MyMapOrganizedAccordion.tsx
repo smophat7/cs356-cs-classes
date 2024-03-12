@@ -4,12 +4,12 @@ import { Course } from "../types/Course";
 import { Program, ProgramRequirement } from "../types/Program";
 import {
   Center,
-  ComboboxData,
   Container,
   Flex,
   Loader,
   ScrollArea,
   Select,
+  Text,
 } from "@mantine/core";
 import { getCourseGroupIdsFromProgram, getProgramSelectData } from "../utils";
 
@@ -58,6 +58,7 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
             programs.find((x) => x.programGroupId === value) || null
           )
         }
+        allowDeselect={false}
       />
     </Filter>
   );
@@ -65,6 +66,15 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
   return (
     <Flex h="100%" direction={{ base: "column" }} gap={24}>
       <Container>{programFilterElements}</Container>
+      {programFilter ? (
+        <Text size="lg" fw={500}>
+          {`Total Credits: ${programFilter.variableCreditHourMin} `}
+          {programFilter.variableCreditHourMax !==
+            programFilter.variableCreditHourMin &&
+            `- ${programFilter.variableCreditHourMax} `}
+          credits
+        </Text>
+      ) : null}
       <ScrollArea>
         {programFilter && selectedProgramRequirements ? (
           <CourseGroupedCardsDisplay

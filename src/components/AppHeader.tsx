@@ -38,9 +38,6 @@ const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
         >
           Requirements
         </Button>
-        {/* <Button {...getButtonProps(RouteEndpoints.Method3, isMethod3, true)}>
-          V3
-        </Button> */}
         {isMethod3 && (
           <Burger
             opened={isNavbarOpen}

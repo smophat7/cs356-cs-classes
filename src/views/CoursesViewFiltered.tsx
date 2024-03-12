@@ -8,7 +8,6 @@ import {
   Group,
   Title,
   Stack,
-  Container,
   ComboboxItem,
   ComboboxData,
   Select,
@@ -239,7 +238,11 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
 
   return (
     <Flex h="100%" direction={{ base: "column", sm: "row" }} gap={30}>
-      <Container w={{ base: 250, sm: "33%", md: "25%" }} px={0}>
+      <ScrollArea
+        h={{ base: "50%", sm: "100%" }}
+        w={{ base: "100%", sm: "33%", md: "25%" }}
+        px={0}
+      >
         <Stack gap={24}>
           <div>
             <Title order={1}>Courses</Title>
@@ -257,8 +260,11 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
           {creditHourFilterElements}
           {academicPeriodsWhenOfferedFilterElements}
         </Stack>
-      </Container>
-      <ScrollArea w={{ base: "100%", sm: "67%", md: "75%" }}>
+      </ScrollArea>
+      <ScrollArea
+        h={{ base: "50%", sm: "100%" }}
+        w={{ base: "100%", sm: "67%", md: "75%" }}
+      >
         {filteredCourses.length === 0 ? (
           <Center>
             <Title order={2}>No courses found...</Title>
