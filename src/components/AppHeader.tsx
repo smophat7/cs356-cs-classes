@@ -1,28 +1,19 @@
-import { AppShell, Group, Button, Burger } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
+import { AppShell, Button, Group } from "@mantine/core";
+
 import { RouteEndpoints } from "../types/RouteEndpoints";
-import { useLocation } from "react-router-dom";
 
-type Props = {
-  isNavbarOpen: boolean;
-  setNavbarOpen: (value: boolean) => void;
-};
-
-const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
+const AppHeader: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isCoursesView = location.pathname === RouteEndpoints.Courses;
   const isRequirementsView = location.pathname === RouteEndpoints.Requirements;
-  const isMethod3 = location.pathname === RouteEndpoints.Method3;
+  const isTopicsView = location.pathname === RouteEndpoints.Topics;
 
-  const getButtonProps = (
-    route: RouteEndpoints,
-    isMethodActive: boolean,
-    navbarOpen: boolean = false
-  ) => ({
+  const getButtonProps = (route: RouteEndpoints, isMethodActive: boolean) => ({
     onClick: () => {
       navigate(route);
-      setNavbarOpen(navbarOpen);
     },
     variant: isMethodActive ? "filled" : "outline",
   });
@@ -38,15 +29,9 @@ const AppHeader: React.FC<Props> = ({ isNavbarOpen, setNavbarOpen }) => {
         >
           Requirements
         </Button>
-        {isMethod3 && (
-          <Burger
-            opened={isNavbarOpen}
-            onClick={() => setNavbarOpen(!isNavbarOpen)}
-            hiddenFrom="xs"
-            size="sm"
-            ml="auto"
-          />
-        )}
+        <Button {...getButtonProps(RouteEndpoints.Topics, isTopicsView)}>
+          Topics
+        </Button>
       </Group>
     </AppShell.Header>
   );

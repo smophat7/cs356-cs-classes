@@ -1,19 +1,24 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { CoursesViewFiltered } from "../views";
+import { Center, Loader } from "@mantine/core";
+import {
+  CoursesViewFiltered,
+  MyMapOrganizedAccordion,
+  TopicsView,
+} from "../views";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
-import MyMAPOrganizedAccordion from "../views/MyMapOrganizedAccordion";
 import { RouteEndpoints } from "../types/RouteEndpoints";
-import { Center, Loader } from "@mantine/core";
+import { Topic } from "../types/Topic";
 
 type Props = {
   courses: Course[];
   programs: Program[];
+  topics: Topic[];
 };
 
-const AppRoutes: React.FC<Props> = ({ courses, programs }) => {
-  // If courses or programs are not yet loaded, do not render the routes
-  if (courses.length === 0 || programs.length === 0) {
+const AppRoutes: React.FC<Props> = ({ courses, programs, topics }) => {
+  // If data in props are not yet loaded, do not render the routes
+  if (courses.length === 0 || programs.length === 0 || topics.length === 0) {
     return (
       <Center h="100%">
         <Loader />
@@ -34,8 +39,12 @@ const AppRoutes: React.FC<Props> = ({ courses, programs }) => {
       <Route
         path={RouteEndpoints.Requirements}
         element={
-          <MyMAPOrganizedAccordion courses={courses} programs={programs} />
+          <MyMapOrganizedAccordion courses={courses} programs={programs} />
         }
+      />
+      <Route
+        path={RouteEndpoints.Topics}
+        element={<TopicsView courses={courses} topics={topics} />}
       />
     </Routes>
   );
