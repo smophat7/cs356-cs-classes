@@ -1,15 +1,17 @@
 import React from "react";
+
 import {
+  Badge,
   Card,
   Divider,
-  Text,
-  Group,
   Flex,
-  Spoiler,
-  Title,
-  Badge,
   Grid,
+  Group,
+  Spoiler,
+  Text,
+  Title,
 } from "@mantine/core";
+
 import { Course } from "../types/Course";
 import { AcademicPeriod, CourseTypicallyOffered } from "../types/Enums";
 import { convertToAcademicPeriods, getCreditHoursText } from "../utils";

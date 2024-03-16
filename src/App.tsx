@@ -1,77 +1,35 @@
 import "@mantine/core/styles.css";
+
+import { useEffect, useState } from "react";
+
 import { AppShell, MantineProvider } from "@mantine/core";
-import { theme } from "./theme";
+
+import { AppHeader, AppRoutes } from "./components";
 import rawCourses from "./data/courses.json";
 import rawPrograms from "./data/programs.json";
-import { useLocation } from "react-router-dom";
-import { RouteEndpoints } from "./types/RouteEndpoints";
-import { AppHeader, AppRoutes } from "./components";
-import { useEffect, useState } from "react";
+import rawTopics from "./data/topics.json";
+import { theme } from "./theme";
 import { Course } from "./types/Course";
 import { Program } from "./types/Program";
+import { Topic } from "./types/Topic";
 
 export default function App() {
-  const [navbarOpen, setNavbarOpen] = useState<boolean>(true);
-
-  const location = useLocation();
-  const isCoursesView = location.pathname === RouteEndpoints.Courses;
-  const isRequirementsView = location.pathname === RouteEndpoints.Requirements;
-  // const [topLevelCategories, setTopLevelCategories] = useState<
-  //   TopLevelCategory[]
-  // >([]);
-  // const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory>({
-  //   title: "",
-  //   tags: [],
-  // });
   const [courses, setCourses] = useState<Course[]>([]);
   const [programs, setPrograms] = useState<Program[]>([]);
+  const [topics, setTopics] = useState<Topic[]>([]);
 
   useEffect(() => {
     setCourses(rawCourses as Course[]);
     setPrograms(rawPrograms as Program[]);
+    setTopics(rawTopics as Topic[]);
   }, []);
-
-  // useEffect(() => {
-  //   setQuotes(rawQuotes.map(convertToQuote));
-  //   setTopLevelCategories(
-  //     convertToCategories(rawCategorizations as RawCategorizations)
-  //   );
-  // }, []);
-
-  // useEffect(() => {
-  //   if (topLevelCategories.length > 0) {
-  //     setSelectedSubcategory(topLevelCategories[0].subcategories[0]);
-  //   }
-  // }, [topLevelCategories]);
 
   return (
     <MantineProvider theme={theme}>
-      {/* <AppShell
-        header={{ height: 60 }}
-        {...(isMethod3 && {
-          // only show the navbar for method 3
-          navbar: {
-            width: 300,
-            breakpoint: "xs",
-            collapsed: { mobile: !navbarOpen },
-          },
-        })}
-        footer={{ height: { base: 55, sm: 40, md: 25 } }}
-        padding="md"
-      >
-        <AppHeader isNavbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        {isMethod3 && (
-          <CategoryNavbar
-            topLevelCategories={topLevelCategories}
-            onSelectSubcategory={handleSelectSubcategory}
-          />
-        )} */}
       <AppShell header={{ height: 60 }} padding="md">
-        <AppHeader isNavbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-        <AppShell.Main
-          h={isCoursesView || isRequirementsView ? "100dvh" : "inherit"}
-        >
-          <AppRoutes courses={courses} programs={programs} />
+        <AppHeader />
+        <AppShell.Main h="100dvh">
+          <AppRoutes courses={courses} programs={programs} topics={topics} />
         </AppShell.Main>
       </AppShell>
     </MantineProvider>
