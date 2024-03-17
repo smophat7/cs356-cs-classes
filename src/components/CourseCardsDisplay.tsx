@@ -1,6 +1,7 @@
 import { Flex, StyleProp } from "@mantine/core";
+
 import { Course } from "../types/Course";
-import { CourseCard } from ".";
+import { CourseCard } from "./";
 
 type Props = {
   courses: Course[];

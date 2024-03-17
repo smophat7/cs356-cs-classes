@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CourseGroupedCardsDisplay, Filter } from "../components";
-import { Course } from "../types/Course";
-import { Program, ProgramRequirement } from "../types/Program";
+
 import {
   Center,
   Container,
@@ -11,6 +9,10 @@ import {
   Select,
   Text,
 } from "@mantine/core";
+
+import { CourseGroupedCardsDisplay, Filter } from "../components";
+import { Course } from "../types/Course";
+import { Program, ProgramRequirement } from "../types/Program";
 import { getCourseGroupIdsFromProgram, getProgramSelectData } from "../utils";
 
 type Props = {
@@ -64,7 +66,7 @@ const MyMAPOrganizedAccordion: React.FC<Props> = ({ courses, programs }) => {
   );
 
   return (
-    <Flex h="100%" direction={{ base: "column" }} gap={24}>
+    <Flex h="100%" direction="column" gap={24}>
       <Container>{programFilterElements}</Container>
       {programFilter ? (
         <Text size="lg" fw={500}>
