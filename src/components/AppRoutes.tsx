@@ -34,7 +34,7 @@ const AppRoutes: React.FC<Props> = ({ courses, programs, topics }) => {
       />
       <Route
         path={RouteEndpoints.Courses}
-        element={<CoursesViewFiltered courses={courses} programs={programs} />}
+        element={<CoursesViewFiltered courses={courses} programs={programs} topics={topics} />}
       />
       {/* <Route
         path={RouteEndpoints.Requirements}
