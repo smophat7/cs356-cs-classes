@@ -1,35 +1,35 @@
 import React, { useEffect, useState } from "react";
+
 import {
-  Text,
-  MultiSelect,
-  Flex,
-  ScrollArea,
-  Chip,
-  Group,
-  Title,
-  Stack,
-  ComboboxItem,
-  ComboboxData,
-  Select,
   Center,
-  TextInput,
   CloseButton,
+  ComboboxData,
+  ComboboxItem,
+  Flex,
+  MultiSelect,
+  ScrollArea,
+  Select,
+  Stack,
+  Text,
+  TextInput,
+  Title,
 } from "@mantine/core";
+import { IconSearch } from "@tabler/icons-react";
+
+import { CourseCardsDisplay, Filter } from "../components";
 import { Course } from "../types/Course";
-import { Program } from "../types/Program";
 import {
   Department,
   getDepartmentCode,
   getDepartmentTitle,
 } from "../types/Department";
-import { CourseCardsDisplay, Filter } from "../components";
 import { AcademicPeriod } from "../types/Enums";
+import { Program } from "../types/Program";
 import {
   convertToAcademicPeriods,
-  getProgramSelectData,
   filterHelpers,
+  getProgramSelectData,
 } from "../utils";
-import { IconSearch } from "@tabler/icons-react";
 
 type Props = {
   courses: Course[];
@@ -145,13 +145,9 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
   );
 
   const programFilterElements = (
-    <Filter
-      title="Program"
-      subtitle="View courses that count towards program requirements"
-    >
+    <Filter title="Program">
       <Select
         data={getProgramSelectData(programs)}
-        placeholder="All Programs"
         value={programFilter?.programGroupId}
         onChange={(value) =>
           setProgramFilter(
@@ -159,37 +155,35 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
           )
         }
         clearable
+        searchable
       />
     </Filter>
   );
 
   const courseLevelFilterElements = (
     <Filter title="Course Level">
-      <Chip.Group
-        multiple
+      <MultiSelect
+        data={[100, 200, 300, 400, 500].map((value) => ({
+          value: value.toString(),
+          label: value.toString(),
+        }))}
         value={courseLevelFilter.map((value) => value.toString())}
-        onChange={(values) => setCourseLevelFilter(values.map(Number))}
-      >
-        <Group>
-          <Chip value="100">100</Chip>
-          <Chip value="200">200</Chip>
-          <Chip value="300">300</Chip>
-          <Chip value="400">400</Chip>
-          <Chip value="500">500</Chip>
-        </Group>
-      </Chip.Group>
+        onChange={(values) =>
+          setCourseLevelFilter(values.map((str) => parseInt(str)))
+        }
+        clearable
+        searchable
+      />
     </Filter>
   );
 
   const departmentFilterElements = (
     <Filter title="Department">
       <MultiSelect
-        placeholder="Add Departments"
         data={departmentMultiSelectData}
         value={departmentFilter}
         onChange={(values) => setDepartmentFilter(values as Department[])}
         clearable
-        hidePickedOptions
         searchable
       />
     </Filter>
@@ -197,42 +191,40 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
 
   const creditHourFilterElements = (
     <Filter title="Credit Hours">
-      <Chip.Group
-        multiple
+      <MultiSelect
+        data={[1, 2, 3, 4].map((value) => ({
+          value: value.toString(),
+          label: value.toString(),
+        }))}
         value={creditHourFilter.map((value) => value.toString())}
         onChange={(values) =>
-          setCreditHourFilter(values.map(Number) as number[])
+          setCreditHourFilter(values.map((str) => parseInt(str)))
         }
-      >
-        <Group>
-          <Chip value="1">1</Chip>
-          <Chip value="2">2</Chip>
-          <Chip value="3">3</Chip>
-          <Chip value="4">4</Chip>
-        </Group>
-      </Chip.Group>
+        clearable
+        searchable
+      />
     </Filter>
   );
 
   const academicPeriodsWhenOfferedFilterElements = (
-    <Filter
-      title="Typically Offered"
-      subtitle="Check MyMap for semester-specific course offerings"
-    >
-      <Chip.Group
-        multiple
+    <Filter title="Academic Periods Offered">
+      <MultiSelect
+        data={[
+          AcademicPeriod.FALL,
+          AcademicPeriod.WINTER,
+          AcademicPeriod.SPRING,
+          AcademicPeriod.SUMMER,
+        ].map((value) => ({
+          value,
+          label: value,
+        }))}
         value={academicPeriodsWhenOfferedFilter}
         onChange={(values) =>
           setAcademicPeriodsWhenOfferedFilter(values as AcademicPeriod[])
         }
-      >
-        <Group>
-          <Chip value={AcademicPeriod.FALL}>{AcademicPeriod.FALL}</Chip>
-          <Chip value={AcademicPeriod.WINTER}>{AcademicPeriod.WINTER}</Chip>
-          <Chip value={AcademicPeriod.SPRING}>{AcademicPeriod.SPRING}</Chip>
-          <Chip value={AcademicPeriod.SUMMER}>{AcademicPeriod.SUMMER}</Chip>
-        </Group>
-      </Chip.Group>
+        clearable
+        searchable
+      />
     </Filter>
   );
 
@@ -243,7 +235,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
         w={{ base: "100%", sm: "33%", md: "25%" }}
         px={0}
       >
-        <Stack gap={24}>
+        <Stack gap="sm">
           <div>
             <Title order={1}>Courses</Title>
             <Text size="lg">
