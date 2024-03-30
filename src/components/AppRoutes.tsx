@@ -1,10 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Center, Loader } from "@mantine/core";
-import {
-  CoursesViewFiltered,
-  MyMapOrganizedAccordion,
-  TopicsView,
-} from "../views";
+import { CoursesViewFiltered } from "../views";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import { RouteEndpoints } from "../types/RouteEndpoints";

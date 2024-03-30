@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { AppShell, MantineProvider } from "@mantine/core";
 
-import { AppHeader, AppRoutes } from "./components";
+import { AppRoutes } from "./components";
 import rawCourses from "./data/courses.json";
 import rawPrograms from "./data/programs.json";
 import rawTopics from "./data/topics.json";
