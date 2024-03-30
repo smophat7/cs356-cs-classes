@@ -36,16 +36,16 @@ const AppRoutes: React.FC<Props> = ({ courses, programs, topics }) => {
         path={RouteEndpoints.Courses}
         element={<CoursesViewFiltered courses={courses} programs={programs} />}
       />
-      <Route
+      {/* <Route
         path={RouteEndpoints.Requirements}
         element={
           <MyMapOrganizedAccordion courses={courses} programs={programs} />
         }
-      />
-      <Route
+      /> */}
+      {/* <Route
         path={RouteEndpoints.Topics}
         element={<TopicsView courses={courses} topics={topics} />}
-      />
+      /> */}
     </Routes>
   );
 };
