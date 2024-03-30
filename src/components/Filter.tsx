@@ -1,18 +1,17 @@
-import { Title, Text } from "@mantine/core";
 import React from "react";
 
+import { Text, Title } from "@mantine/core";
+
 interface Props {
-  title: string;
+  title?: string;
   subtitle?: string;
   children?: React.ReactNode;
 }
 
 const Filter: React.FC<Props> = ({ title, subtitle, children }) => (
   <div>
-    <Title order={4}>{title}</Title>
-    <Text size="sm" mb={5}>
-      {subtitle}
-    </Text>
+    {title && <Title order={6}>{title}</Title>}
+    {subtitle && <Text size="sm">{subtitle}</Text>}
     {children}
   </div>
 );
