@@ -80,23 +80,26 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           {course.description}
         </Text>
         <Space flex={1} />
-        <Button onClick={toggleModal} mb="md" size="xs" variant="outline">
+        <Button onClick={toggleModal} my="xs" size="xs" variant="outline">
           More
         </Button>
         <Modal
-          title="Course Description"
+          title={
+            <>
+              <Title order={4}>{course.code}</Title>
+              <Title order={6}>{course.longName}</Title>
+            </>
+          }
           opened={modalOpen}
           onClose={toggleModal}
+          centered
         >
-          <Title order={4}>{course.code}</Title>
-          <Title order={6}>{course.name}</Title>
-          <Text>{`\n`}</Text>
-          <Text>{course.description}</Text>
+          <Text pb="md">{course.description}</Text>
           <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
-            <Grid.Col span={5}>
+            <Grid.Col span={4}>
               <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
             </Grid.Col>
-            <Grid.Col span={7}>
+            <Grid.Col span={8}>
               {periodsOffered(course.courseTypicallyOffered)}
             </Grid.Col>
           </Grid>
