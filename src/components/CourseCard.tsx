@@ -68,7 +68,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
         <Title order={4}>{course.code}</Title>
         <Title order={6}>{course.name}</Title>
         
-        <Text style={{ overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical" }}>{course.description}</Text>
+        <Text style={{ overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 1, WebkitBoxOrient: "vertical" }}>{course.description}</Text>
         <Button onClick = {toggleModal}>More</Button>
         <Modal
           title="Course Description"
