@@ -47,6 +47,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
       </Group>
     );
   };
+
   const periodBadge = (
     label: string,
     desiredPeriod: AcademicPeriod,
@@ -59,6 +60,19 @@ const CourseCard: React.FC<Props> = ({ course }) => {
       >
         {label}
       </Badge>
+    );
+  };
+
+  const creditAndPeriodFooter = () => {
+    return (
+      <Grid c="dimmed" ta="center" align="center" gutter={0}>
+        <Grid.Col span={5}>
+          <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
+        </Grid.Col>
+        <Grid.Col span={7}>
+          {periodsOffered(course.courseTypicallyOffered)}
+        </Grid.Col>
+      </Grid>
     );
   };
 
@@ -94,26 +108,12 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           onClose={toggleModal}
         >
           <Text pb="md">{course.description}</Text>
-          <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
-            <Grid.Col span={4}>
-              <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
-            </Grid.Col>
-            <Grid.Col span={8}>
-              {periodsOffered(course.courseTypicallyOffered)}
-            </Grid.Col>
-          </Grid>
+          {creditAndPeriodFooter()}
         </Modal>
       </Flex>
       <Card.Section>
         <Divider />
-        <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
-          <Grid.Col span={4}>
-            <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
-          </Grid.Col>
-          <Grid.Col span={8}>
-            {periodsOffered(course.courseTypicallyOffered)}
-          </Grid.Col>
-        </Grid>
+        {creditAndPeriodFooter()}
       </Card.Section>
     </Card>
   );
