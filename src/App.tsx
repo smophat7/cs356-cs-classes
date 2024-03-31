@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <MantineProvider theme={theme}>
-      <AppShell header={{ height: 60 }} padding="md">        
+      <AppShell padding="md">
         <AppShell.Main h="100dvh">
           <AppRoutes courses={courses} programs={programs} topics={topics} />
         </AppShell.Main>

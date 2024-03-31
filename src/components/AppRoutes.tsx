@@ -1,10 +1,12 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+
 import { Center, Loader } from "@mantine/core";
-import { CoursesViewFiltered } from "../views";
+
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import { RouteEndpoints } from "../types/RouteEndpoints";
 import { Topic } from "../types/Topic";
+import { CoursesViewFiltered } from "../views";
 
 type Props = {
   courses: Course[];
@@ -28,20 +30,21 @@ const AppRoutes: React.FC<Props> = ({ courses, programs, topics }) => {
         path="/"
         element={<Navigate to={RouteEndpoints.Courses} replace={true} />}
       />
+      {/* Reroute to a page on unknown route */}
+      <Route
+        path="*"
+        element={<Navigate to={RouteEndpoints.Courses} replace={true} />}
+      />
       <Route
         path={RouteEndpoints.Courses}
-        element={<CoursesViewFiltered courses={courses} programs={programs} topics={topics} />}
-      />
-      {/* <Route
-        path={RouteEndpoints.Requirements}
         element={
-          <MyMapOrganizedAccordion courses={courses} programs={programs} />
+          <CoursesViewFiltered
+            courses={courses}
+            programs={programs}
+            topics={topics}
+          />
         }
-      /> */}
-      {/* <Route
-        path={RouteEndpoints.Topics}
-        element={<TopicsView courses={courses} topics={topics} />}
-      /> */}
+      />
     </Routes>
   );
 };
