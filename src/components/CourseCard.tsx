@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, {useState} from "react";
 import {
   Badge,
   Card,
@@ -7,9 +6,10 @@ import {
   Flex,
   Grid,
   Group,
-  Spoiler,
   Text,
   Title,
+  Modal,
+  Button
 } from "@mantine/core";
 
 import { Course } from "../types/Course";
@@ -21,6 +21,13 @@ type Props = {
 };
 
 const CourseCard: React.FC<Props> = ({ course }) => {
+  
+  const [modalOpen, setModalOpen] = useState(false);
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
+  
   const periodsOffered = (courseTypicallyOffered: CourseTypicallyOffered) => {
     const periods: AcademicPeriod[] = convertToAcademicPeriods(
       courseTypicallyOffered
@@ -31,16 +38,15 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           <Text>Contact Dept.</Text>
         ) : (
           <>
-            {periodBadge("F", AcademicPeriod.FALL, periods)}
-            {periodBadge("W", AcademicPeriod.WINTER, periods)}
-            {periodBadge("S", AcademicPeriod.SPRING, periods)}
-            {periodBadge("S", AcademicPeriod.SUMMER, periods)}
+            {periodBadge("Fa", AcademicPeriod.FALL, periods)}
+            {periodBadge("Wi", AcademicPeriod.WINTER, periods)}
+            {periodBadge("Sp", AcademicPeriod.SPRING, periods)}
+            {periodBadge("Su", AcademicPeriod.SUMMER, periods)}
           </>
         )}
       </Group>
     );
   };
-
   const periodBadge = (
     label: string,
     desiredPeriod: AcademicPeriod,
@@ -57,13 +63,32 @@ const CourseCard: React.FC<Props> = ({ course }) => {
   };
 
   return (
-    <Card withBorder radius="md" p="md" w={250} mih={250} shadow="md">
+    <Card withBorder radius="md" p="md" w={250} mih={150} shadow="md">
       <Flex direction="column" h="100%">
         <Title order={4}>{course.code}</Title>
         <Title order={6}>{course.name}</Title>
-        <Spoiler showLabel="More" hideLabel="Less" flex={1} maxHeight={150}>
+        
+        <Text style={{ overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 1, WebkitBoxOrient: "vertical" }}>{course.description}</Text>
+        <Button onClick = {toggleModal}>More</Button>
+        <Modal
+          title="Course Description"
+          opened={modalOpen}
+          onClose={toggleModal}
+        >
+          <Title order={4}>{course.code}</Title>
+          <Title order={6}>{course.name}</Title>
+          <Text>{`\n`}</Text>
           <Text>{course.description}</Text>
-        </Spoiler>
+          <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
+            <Grid.Col span={5}>
+              <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
+            </Grid.Col>
+            <Grid.Col span={7}>
+              {periodsOffered(course.courseTypicallyOffered)}
+            </Grid.Col>
+          </Grid>
+        </Modal>
+                        
       </Flex>
       <Card.Section>
         <Divider />
