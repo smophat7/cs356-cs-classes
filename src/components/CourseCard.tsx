@@ -92,7 +92,6 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           }
           opened={modalOpen}
           onClose={toggleModal}
-          centered
         >
           <Text pb="md">{course.description}</Text>
           <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
