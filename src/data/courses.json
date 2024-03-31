@@ -2417,7 +2417,7 @@
     },
     "departments": ["1323"],
     "dependents": [],
-    "description": "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.\\n",
+    "description": "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.",
     "effectiveEndDate": "2999-12-31",
     "effectiveStartDate": "2014-09-02",
     "endTerm": { "id": "29995" },
