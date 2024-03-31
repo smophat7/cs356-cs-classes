@@ -38,7 +38,11 @@ type Props = {
   topics: Topic[];
 };
 
-const CoursesViewFiltered: React.FC<Props> = ({ courses, programs, topics }) => {
+const CoursesViewFiltered: React.FC<Props> = ({
+  courses,
+  programs,
+  topics,
+}) => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
   const [searchTextFilteredCourses, setSearchTextFilteredCourses] = useState<
     Course[] | null
@@ -86,7 +90,10 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs, topics }) => 
             convertToAcademicPeriods(course.courseTypicallyOffered),
             academicPeriodsWhenOfferedFilter
           )) &&
-        (selectedTopic === null || topics.find((topic) => topic.id === selectedTopic)?.courseGroupIds.includes(course._id))
+        (selectedTopic === null ||
+          topics
+            .find((topic) => topic.id === selectedTopic)
+            ?.courseGroupIds.includes(course.courseGroupId))
     );
     setFilteredCourses(newFilteredCourses);
   }, [
@@ -96,8 +103,9 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs, topics }) => 
     departmentFilter,
     creditHourFilter,
     academicPeriodsWhenOfferedFilter,
-    selectedTopic,    
+    selectedTopic,
     courses,
+    topics,
   ]);
 
   /**
@@ -254,9 +262,10 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs, topics }) => 
       >
         <Stack gap="sm">
           <div>
-            <Title order={1}>Courses</Title>
-            <Text size="lg">
-              Explore all courses that are part of our undergraduate CS programs
+            <Title order={1}>BYU CS Courses</Title>
+            <Text size="lg" lh={1.2}>
+              Explore all courses that are part of our undergraduate Computer
+              Science programs
             </Text>
             <Text c="dimmed">
               Showing {filteredCourses.length} of {courses.length} courses
