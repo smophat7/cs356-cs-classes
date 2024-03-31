@@ -80,7 +80,7 @@ const CourseCard: React.FC<Props> = ({ course }) => {
           <Text>{course.description}</Text>
           <Grid c="dimmed" ta="center" px="xs" align="center" p={0}>
             <Grid.Col span={5}>
-              <Text>Credit Hours: {getCreditHoursText(course.credits.creditHours)}</Text>
+              <Text>{getCreditHoursText(course.credits.creditHours)}</Text>
             </Grid.Col>
             <Grid.Col span={7}>
               {periodsOffered(course.courseTypicallyOffered)}
