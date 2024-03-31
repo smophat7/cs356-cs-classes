@@ -1,10 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Center, Loader } from "@mantine/core";
-import {
-  CoursesViewFiltered,
-  MyMapOrganizedAccordion,
-  TopicsView,
-} from "../views";
+import { CoursesViewFiltered } from "../views";
 import { Course } from "../types/Course";
 import { Program } from "../types/Program";
 import { RouteEndpoints } from "../types/RouteEndpoints";
@@ -34,18 +30,18 @@ const AppRoutes: React.FC<Props> = ({ courses, programs, topics }) => {
       />
       <Route
         path={RouteEndpoints.Courses}
-        element={<CoursesViewFiltered courses={courses} programs={programs} />}
+        element={<CoursesViewFiltered courses={courses} programs={programs} topics={topics} />}
       />
-      <Route
+      {/* <Route
         path={RouteEndpoints.Requirements}
         element={
           <MyMapOrganizedAccordion courses={courses} programs={programs} />
         }
-      />
-      <Route
+      /> */}
+      {/* <Route
         path={RouteEndpoints.Topics}
         element={<TopicsView courses={courses} topics={topics} />}
-      />
+      /> */}
     </Routes>
   );
 };

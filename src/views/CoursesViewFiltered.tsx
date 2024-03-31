@@ -25,6 +25,7 @@ import {
 } from "../types/Department";
 import { AcademicPeriod } from "../types/Enums";
 import { Program } from "../types/Program";
+import { Topic } from "../types/Topic";
 import {
   convertToAcademicPeriods,
   filterHelpers,
@@ -34,9 +35,10 @@ import {
 type Props = {
   courses: Course[];
   programs: Program[];
+  topics: Topic[];
 };
 
-const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
+const CoursesViewFiltered: React.FC<Props> = ({ courses, programs, topics }) => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
   const [searchTextFilteredCourses, setSearchTextFilteredCourses] = useState<
     Course[] | null
@@ -50,6 +52,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     academicPeriodsWhenOfferedFilter,
     setAcademicPeriodsWhenOfferedFilter,
   ] = useState<AcademicPeriod[]>([]);
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
 
   // Filter courses based on filter selections
   useEffect(() => {
@@ -82,7 +85,8 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
           filterHelpers.isInAcademicPeriodsFilter(
             convertToAcademicPeriods(course.courseTypicallyOffered),
             academicPeriodsWhenOfferedFilter
-          ))
+          )) &&
+        (selectedTopic === null || topics.find((topic) => topic.id === selectedTopic)?.courseGroupIds.includes(course._id))
     );
     setFilteredCourses(newFilteredCourses);
   }, [
@@ -92,6 +96,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     departmentFilter,
     creditHourFilter,
     academicPeriodsWhenOfferedFilter,
+    selectedTopic,    
     courses,
   ]);
 
@@ -228,6 +233,18 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
     </Filter>
   );
 
+  const topicFilterElements = (
+    <Filter title="Topic">
+      <Select
+        data={topics.map((topic) => ({ value: topic.id, label: topic.name }))}
+        value={selectedTopic}
+        onChange={(value) => setSelectedTopic(value)}
+        clearable
+        searchable
+      />
+    </Filter>
+  );
+
   return (
     <Flex h="100%" direction={{ base: "column", sm: "row" }} gap={30}>
       <ScrollArea
@@ -251,6 +268,7 @@ const CoursesViewFiltered: React.FC<Props> = ({ courses, programs }) => {
           {departmentFilterElements}
           {creditHourFilterElements}
           {academicPeriodsWhenOfferedFilterElements}
+          {topicFilterElements}
         </Stack>
       </ScrollArea>
       <ScrollArea
